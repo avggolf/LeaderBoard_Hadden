@@ -1,117 +1,120 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🏌️ Easter Cup — Wednesday 23 April 2025</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      background-color: #121212;
-      color: #eee;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 100%;
-      padding: 1rem;
-      box-sizing: border-box;
-    }
-
-    h1, h2, h3 {
-      color: #ffd700;
-    }
-
-    .card {
-      background-color: #1e1e1e;
-      border-radius: 12px;
-      padding: 1rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    }
-
-    .winner {
-      background-color: #2e2e2e;
-      font-weight: bold;
-    }
-
-    table {
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-
-    th, td {
-      padding: 0.6rem;
-      border: 1px solid #444;
-      text-align: center;
-      white-space: nowrap;
-    }
-
-    .tooltip[data-tip]:hover::after {
-      content: attr(data-tip);
-      position: absolute;
-      background: #333;
-      color: #fff;
-      padding: 5px;
-      border-radius: 5px;
-      font-size: 0.8rem;
-      white-space: nowrap;
-    }
-
-    .chart-container {
-      width: 100%;
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-
-    .player-link {
-      color: #90caf9;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    .player-popover {
-      display: none;
-      background-color: #292929;
-      padding: 1rem;
-      border: 1px solid #555;
-      border-radius: 10px;
-      position: fixed;
-      z-index: 999;
-      color: #fff;
-      width: 90vw;
-      max-height: 80vh;
-      overflow-y: auto;
-      top: 10vh;
-      left: 5vw;
-      box-shadow: 0 0 15px rgba(0,0,0,0.8);
-    }
-
-    .player-popover .close-btn {
-      text-align: right;
-      font-size: 1.5rem;
-      cursor: pointer;
-      margin-bottom: 1rem;
-      color: #f44336;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>🏌️ Easter Cup — Wednesday 23 April 2025</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+h1, h2, h3 {
+  color: #000;
+}
+.card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.winner {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+th, td {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  white-space: nowrap;
+}
+.tooltip[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.chart-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+.player-link {
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.player-popover {
+  display: none;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 999;
+  color: #000;
+  width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  top: 10vh;
+  left: 5vw;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.player-popover .close-btn {
+  text-align: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #cc0000;
+  font-weight: bold;
+}
+.player-popover table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+.player-popover th, .player-popover td {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>🏌️ Easter Cup — Wednesday 23 April 2025</h1>
-
-    <!-- 🏌️ Leaderboards at the top -->
-    <div class="card">
-      <h2>🏌️ Overall Leaderboard</h2>
-      <table>
-        <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th><th>Award</th></tr></thead>
-        <tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Richard Lyons')">Richard Lyons 🥇</span></td><td>15.0</td><td>None</td><td>None</td><td>40</td><td>🥇</td></tr>
+<div class="container">
+<h1>🏌️ Easter Cup — Wednesday 23 April 2025</h1><div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;"><div class="chart-container" style="flex: 1 1 300px; max-width: 600px;">
+<h3>Score Distribution</h3>
+<canvas id="scoreChart"></canvas>
+</div><div class="chart-container" style="flex: 1 1 300px; max-width: 600px;">
+<h3>Average Stableford by Hole</h3>
+<canvas id="holeChart"></canvas>
+</div></div><div style="display: flex; gap: 2rem; justify-content: center; align-items: flex-start; flex-wrap: wrap;"><div style="flex: 2 1 600px;"><div class="card">
+<h2>🏌️ Overall Leaderboard</h2>
+<table>
+<thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th><th>Award</th></tr></thead>
+<tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Richard Lyons')">Richard Lyons 🥇</span></td><td>15.0</td><td>None</td><td>None</td><td>40</td><td>🥇</td></tr>
 <tr class='winner'><td>2</td><td><span class='player-link' onclick="showPlayer('Olly Talbot')">Olly Talbot 🥈</span></td><td>18.0</td><td>None</td><td>None</td><td>40</td><td>🥈</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('John Hall')">John Hall 🥉</span></td><td>24.0</td><td>None</td><td>None</td><td>38</td><td>🥉</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>4</td><td><span class='player-link' onclick="showPlayer('Gary Walker')">Gary Walker</span></td><td>16.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
@@ -172,14 +175,12 @@
 <tr class=''><td>59</td><td><span class='player-link' onclick="showPlayer('Lee Binaccioni')">Lee Binaccioni</span></td><td>14.0</td><td>None</td><td>None</td><td>24</td><td></td></tr>
 <tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>60</td><td><span class='player-link' onclick="showPlayer('Gary Bumpass')">Gary Bumpass</span></td><td>12.0</td><td>None</td><td>None</td><td>22</td><td></td></tr>
 <tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>61</td><td><span class='player-link' onclick="showPlayer('Simon Griffiths')">Simon Griffiths</span></td><td>18.0</td><td>None</td><td>None</td><td>21</td><td></td></tr></tbody>
-      </table>
-    </div>
-
-    <div class="card">
-      <h2>🏌️ Div 1 (hcp < 13)</h2>
-      <table>
-        <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th><th>Award</th></tr></thead>
-        <tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne 🥇</span></td><td>12.0</td><td>None</td><td>None</td><td>37</td><td>🥇</td></tr>
+</table>
+</div><div class="card">
+<h2>🏌️ Div 1 (hcp 1–12)</h2>
+<table>
+<thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th><th>Award</th></tr></thead>
+<tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne 🥇</span></td><td>12.0</td><td>None</td><td>None</td><td>37</td><td>🥇</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 10: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('Steve Rapley')">Steve Rapley 🥈</span></td><td>10.0</td><td>None</td><td>None</td><td>35</td><td>🥈</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>3</td><td><span class='player-link' onclick="showPlayer('Wayne Talbot')">Wayne Talbot 🥉</span></td><td>8.0</td><td>None</td><td>None</td><td>33</td><td>🥉</td></tr>
 <tr class=''><td>4</td><td><span class='player-link' onclick="showPlayer('Mark Grootz')">Mark Grootz</span></td><td>1.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
@@ -195,14 +196,12 @@
 <tr class='' class="tooltip" data-tip="Hole 12: 9 😬 We’ve all been there…"><td>14</td><td><span class='player-link' onclick="showPlayer('Darren Brooks')">Darren Brooks</span></td><td>8.0</td><td>None</td><td>None</td><td>26</td><td></td></tr>
 <tr class=''><td>15</td><td><span class='player-link' onclick="showPlayer('Mark Brokenshire')">Mark Brokenshire</span></td><td>12.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
 <tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>16</td><td><span class='player-link' onclick="showPlayer('Gary Bumpass')">Gary Bumpass</span></td><td>12.0</td><td>None</td><td>None</td><td>22</td><td></td></tr></tbody>
-      </table>
-    </div>
-
-    <div class="card">
-      <h2>🏌️ Div 2 (hcp 13+)</h2>
-      <table>
-        <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th><th>Award</th></tr></thead>
-        <tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Richard Lyons')">Richard Lyons 🥇</span></td><td>15.0</td><td>None</td><td>None</td><td>40</td><td>🥇</td></tr>
+</table>
+</div><div class="card">
+<h2>🏌️ Div 2 (hcp 13+ – The Choppers)</h2>
+<table>
+<thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th><th>Award</th></tr></thead>
+<tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Richard Lyons')">Richard Lyons 🥇</span></td><td>15.0</td><td>None</td><td>None</td><td>40</td><td>🥇</td></tr>
 <tr class='winner'><td>2</td><td><span class='player-link' onclick="showPlayer('Olly Talbot')">Olly Talbot 🥈</span></td><td>18.0</td><td>None</td><td>None</td><td>40</td><td>🥈</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('John Hall')">John Hall 🥉</span></td><td>24.0</td><td>None</td><td>None</td><td>38</td><td>🥉</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>4</td><td><span class='player-link' onclick="showPlayer('Gary Walker')">Gary Walker</span></td><td>16.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
@@ -247,25 +246,15 @@
 <tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>43</td><td><span class='player-link' onclick="showPlayer('Don Law')">Don Law</span></td><td>16.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
 <tr class=''><td>44</td><td><span class='player-link' onclick="showPlayer('Lee Binaccioni')">Lee Binaccioni</span></td><td>14.0</td><td>None</td><td>None</td><td>24</td><td></td></tr>
 <tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>45</td><td><span class='player-link' onclick="showPlayer('Simon Griffiths')">Simon Griffiths</span></td><td>18.0</td><td>None</td><td>None</td><td>21</td><td></td></tr></tbody>
-      </table>
-    </div>
-
-    <!-- Summary and extras -->
-    <div class="card">
-      <h2>📅 Wednesday 23 April 2025</h2>
-      <p>March at Hadden Hill was a month of mud, medals, and midweek meltdowns...</p>
-    </div>
-
-    <div class="card">
-      <h2>🥇 Winner's Circle</h2>
-      <ul><li>- Richard Lyons stormed ahead with 40 points.</li>
+</table>
+</div></div><div style="flex: 1 1 300px; max-width: 500px;"><div class="card">
+<h2>🥇 Winner's Circle</h2>
+<ul><li>- Richard Lyons stormed ahead with 40 points.</li>
 <li>- Olly Talbot came to play and walked away with 40.</li>
 <li>- John Hall barely broke a sweat on the way to 38.</li></ul>
-    </div>
-
-    <div class="card">
-      <h2>🏅 Special Mentions</h2>
-      <ul><li>💩 Worst Hole of the Week: Hole 12 - David Stas scored 9</li>
+</div><div class="card">
+<h2>🏅 Special Mentions</h2>
+<ul><li>💩 Worst Hole of the Week: Hole 12 - David Stas scored 9</li>
 <li>🌟 Best Hole of the Week: Hole 7 - Craig Fisher scored 2</li>
 <li>🐦 **Birdie Barrage**: Mark Grootz with 5 birdies</li>
 <li>🟰 **Par Machine**: Lee Fuller with 9 pars</li>
@@ -285,40 +274,28 @@
 <li>🥴 **Mr. Inconsistent**: David Stas ranged 6 shots between best & worst hole</li>
 <li>🛠 **The Grinder**: Gary Walker made 8 pars without a single birdie</li>
 <li>🧨 **Bomb Hole Bandit**: John Roper mastered the bomb holes (11 & 12) with 4</li>
-<li>📞 **On Hold Champion**: David Stas kept cool on 9 and still scored 3</li>
+<li>📞 **On Hold Champion**: John Roper kept cool on 9 and still scored 3</li>
 <li>🛞 **Corner Cutter**: David Stas took on the 10th and it paid off – 3!</li>
 <li>🛞 **Corner Cutter**: Richard Lyons took on the 10th and it paid off – 3!</li>
-<li>🚫 **Safety First**: Gary Walker played it smart on 2 & 8 with no trouble</li>
-<li>🪦 **OB Survivor**: Richard Hall kept it clean on OB holes: 2</li>
+<li>🚫 **Safety First**: Mark Roberts played it smart on 2 & 8 with no trouble</li>
+<li>🪦 **OB Survivor**: Richard Lyons kept it clean on OB holes: 2</li>
 <li>😤 **Sixteen Slayer**: Philip Cole conquered the toughest hole with a 4</li></ul>
-    </div>
-
-    <div class="card">
-      <h2>🍔 Fat Mates</h2>
-      <ul><li>No fat mates this week.</li></ul>
-    </div>
-
-    <div class="card">
-      <h2>📊 Stats Summary</h2>
-      <ul><li>- Avg Gross: - | Avg Nett: - | Avg Stableford: 31.2</li>
+</div><div class="card">
+<h2>🍔 Fat Mates</h2>
+<ul><li>No fat mates this week.</li></ul>
+</div><div class="card">
+<h2>📊 Stats Summary</h2>
+<ul><li>- Avg Gross: - | Avg Nett: - | Avg Stableford: 31.2</li>
 <li>- Total Players: 61</li>
 <li>- Most Generous Hole: Hole 7 (Avg 3.23 Stableford points)</li>
 <li>- Blow-Up Hole: Hole 12 (6 blobs, Avg 6.2 strokes)</li>
 <li>- Most Consistent: David Beaven (2-shot variance)</li></ul>
-    </div>
+</div></div></div>
+<!-- 🏌️ Leaderboards at the top -->
+<!-- Summary and extras -->
 
-    <div class="chart-container">
-      <h3>Score Distribution</h3>
-      <canvas id="scoreChart"></canvas>
-    </div>
-
-    <div class="chart-container">
-      <h3>Average Stableford by Hole</h3>
-      <canvas id="holeChart"></canvas>
-    </div>
-  </div>
-
-  <script>
+</div>
+<script>
     document.addEventListener("DOMContentLoaded", () => {
       const scoreData = [{"label": "21", "count": 1}, {"label": "22", "count": 1}, {"label": "24", "count": 1}, {"label": "25", "count": 3}, {"label": "26", "count": 3}, {"label": "27", "count": 4}, {"label": "28", "count": 1}, {"label": "29", "count": 5}, {"label": "30", "count": 7}, {"label": "31", "count": 6}, {"label": "32", "count": 7}, {"label": "33", "count": 5}, {"label": "34", "count": 6}, {"label": "35", "count": 2}, {"label": "36", "count": 2}, {"label": "37", "count": 1}, {"label": "38", "count": 4}, {"label": "40", "count": 2}];
       const holeAverages = [{"hole": "H1", "avg": 1.46}, {"hole": "H2", "avg": 2.57}, {"hole": "H3", "avg": 1.77}, {"hole": "H4", "avg": 2.07}, {"hole": "H5", "avg": 2.14}, {"hole": "H6", "avg": 1.93}, {"hole": "H7", "avg": 3.23}, {"hole": "H8", "avg": 2.23}, {"hole": "H9", "avg": 2.92}, {"hole": "H10", "avg": 1.7}, {"hole": "H11", "avg": 1.77}, {"hole": "H12", "avg": 0.78}, {"hole": "H13", "avg": 1.25}, {"hole": "H14", "avg": 2.66}, {"hole": "H15", "avg": 1.46}, {"hole": "H16", "avg": 1.25}, {"hole": "H17", "avg": 2.65}, {"hole": "H18", "avg": 0.68}];
@@ -399,8 +376,7 @@
       });
     });
   </script>
-
-  <!-- 👤 All player popups rendered here -->
+<!-- 👤 All player popups rendered here -->
   
             <div id="popover-Alex_Barber" class="player-popover">
             <div class="close-btn" data-name="Alex_Barber" onclick="hidePopoverByElement(this)">&times;</div>
@@ -448,7 +424,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>7</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>7</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>7</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>3</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>9</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>💩 Worst Hole of the Week: Hole 12 - David Stas scored 9</li><li>🎢 **Rollercoaster Award**: David Stas with a 6 point swing between holes</li><li>🐌 **Slow Burner**: David Stas took 20 to get going on holes 1–3</li><li>🥴 **Mr. Inconsistent**: David Stas ranged 6 shots between best & worst hole</li><li>📞 **On Hold Champion**: David Stas kept cool on 9 and still scored 3</li><li>🛞 **Corner Cutter**: David Stas took on the 10th and it paid off – 3!</li></ul>
+            <ul><li>💩 Worst Hole of the Week: Hole 12 - David Stas scored 9</li><li>🎢 **Rollercoaster Award**: David Stas with a 6 point swing between holes</li><li>🐌 **Slow Burner**: David Stas took 20 to get going on holes 1–3</li><li>🥴 **Mr. Inconsistent**: David Stas ranged 6 shots between best & worst hole</li><li>🛞 **Corner Cutter**: David Stas took on the 10th and it paid off – 3!</li></ul>
     </div>
     
 
@@ -458,7 +434,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>8</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🪦 **OB Survivor**: Richard Hall kept it clean on OB holes: 2</li></ul>
+            <ul><li>None</li></ul>
     </div>
     
 
@@ -558,7 +534,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>None</li></ul>
+            <ul><li>🚫 **Safety First**: Mark Roberts played it smart on 2 & 8 with no trouble</li></ul>
     </div>
     
 
@@ -648,7 +624,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>3</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>3</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🛞 **Corner Cutter**: Richard Lyons took on the 10th and it paid off – 3!</li></ul>
+            <ul><li>🛞 **Corner Cutter**: Richard Lyons took on the 10th and it paid off – 3!</li><li>🪦 **OB Survivor**: Richard Lyons kept it clean on OB holes: 2</li></ul>
     </div>
     
 
@@ -678,7 +654,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>3</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🧨 **Bomb Hole Bandit**: John Roper mastered the bomb holes (11 & 12) with 4</li></ul>
+            <ul><li>🧨 **Bomb Hole Bandit**: John Roper mastered the bomb holes (11 & 12) with 4</li><li>📞 **On Hold Champion**: John Roper kept cool on 9 and still scored 3</li></ul>
     </div>
     
 
@@ -798,7 +774,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>7</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>3</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🛠 **The Grinder**: Gary Walker made 8 pars without a single birdie</li><li>🚫 **Safety First**: Gary Walker played it smart on 2 & 8 with no trouble</li></ul>
+            <ul><li>🛠 **The Grinder**: Gary Walker made 8 pars without a single birdie</li></ul>
     </div>
     
 
@@ -1014,4 +990,3 @@
 
 </body>
 </html>
-
