@@ -1,508 +1,289 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>🏌️ Easter Cup — Wednesday 23 April 2025</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<style>
-body {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-.container {
-  max-width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-h1, h2, h3 {
-  color: #000;
-}
-.card {
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-.winner {
-  background-color: #e0e0e0;
-  font-weight: bold;
-}
-table {
-  width: 100%;
-  overflow-x: auto;
-  display: block;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-th, td {
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  text-align: center;
-  white-space: nowrap;
-}
-.tooltip[data-tip]:hover::after {
-  content: attr(data-tip);
-  position: absolute;
-  background: #000;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  white-space: nowrap;
-}
-.chart-container {
-  width: 100%;
-  max-width: 600px;
-  margin: 2rem auto;
-}
-.player-link {
-  color: #000;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.player-popover {
-  display: none;
-  background-color: #fff;
-  padding: 1rem;
-  border: 1px solid #aaa;
-  border-radius: 10px;
-  position: fixed;
-  z-index: 999;
-  color: #000;
-  width: 90vw;
-  max-height: 80vh;
-  overflow-y: auto;
-  top: 10vh;
-  left: 5vw;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-.player-popover .close-btn {
-  text-align: right;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  color: #cc0000;
-  font-weight: bold;
-}
-.player-popover table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-}
-.player-popover th, .player-popover td {
-  padding: 0.4rem;
-  border: 1px solid #ccc;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .chart-container {
-    flex: 1 1 100% !important;
-    max-width: 100% !important;
-  }
-
-  div[style*="display: flex"][style*="wrap"] {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  .card {
-    width: 100% !important;
-  }
-
-  table {
-    display: block;
-    overflow-x: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.2rem;
-  }
-
-  th, td {
-    font-size: 0.9rem;
-    padding: 0.4rem;
-  }
-
-  .player-popover {
-    width: 95vw !important;
-    left: 2.5vw !important;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 12px;
-  }
-
-  h1, h2, h3 {
-    font-size: 1rem;
-  }
-
-  th, td {
-    font-size: 0.75rem;
-    padding: 0.3rem;
-  }
-
-  .card {
-    margin-bottom: 1rem;
-  }
-
-  .player-popover {
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 12px;
-  }
-
-  h1, h2, h3 {
-    font-size: 1rem;
-  }
-
-  th, td {
-    font-size: 0.75rem;
-    padding: 0.3rem;
-  }
-
-  .card {
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-
-  .chart-container {
-    flex: 1 1 100% !important;
-    max-width: 100% !important;
-  }
-
-  .player-popover {
-    font-size: 0.85rem;
-    width: 95vw !important;
-    left: 2.5vw !important;
-  }
-
-  table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  table thead, table tbody {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-  }
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏌️ Men's Monthly Stableford April #3 2025 — Thursday 24 April 2025</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    h1, h2, h3 {
+      color: #000;
+    }
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      overflow-x: auto;
+    }
+    .winner {
+      background-color: #e0e0e0;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      table-layout: auto;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      text-align: center;
+      white-space: nowrap;
+      word-wrap: break-word;
+    }
+    th:nth-child(3), td:nth-child(3) { /* HCP column */
+      min-width: 40px;
+    }
+    .tooltip[data-tip]:hover::after {
+      content: attr(data-tip);
+      position: absolute;
+      background: #000;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+    .chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .player-popover {
+      display: none;
+      background-color: #fff;
+      padding: 1rem;
+      border: 1px solid #aaa;
+      border-radius: 10px;
+      position: fixed;
+      z-index: 999;
+      color: #000;
+      width: 90vw;
+      max-height: 80vh;
+      overflow-y: auto;
+      top: 10vh;
+      left: 5vw;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    .player-popover .close-btn {
+      text-align: right;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      color: #cc0000;
+      font-weight: bold;
+    }
+    .player-popover table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .player-popover th, .player-popover td {
+      padding: 0.4rem;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 10px;
+      }
+      h1, h2, h3 {
+        font-size: 1.2rem;
+      }
+      th, td {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+      }
+      .player-popover {
+        width: 95vw !important;
+        left: 2.5vw !important;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
 <div class="container">
-<h1>🏌️ Easter Cup — Wednesday 23 April 2025</h1><div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;"><div class="chart-container" style="flex: 1 1 300px; max-width: 600px;">
-<h3>Score Distribution</h3>
-<canvas id="scoreChart"></canvas>
-</div><div class="chart-container" style="flex: 1 1 300px; max-width: 600px;">
-<h3>Average Stableford by Hole</h3>
-<canvas id="holeChart"></canvas>
-</div></div><div style="display: flex; gap: 2rem; justify-content: center; align-items: flex-start; flex-wrap: wrap;"><div style="flex: 2 1 600px;"><div class="card">
-<h2>🏌️ Overall Leaderboard</h2>
-<table>
-<thead><tr><th>Pos</th><th>Player</th><th>Nett</th><th>Stableford</th></tr></thead>
-<tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Richard Lyons')">Richard Lyons 🥇</span></td><td>15.0</td><td>None</td><td>None</td><td>40</td><td>🥇</td></tr>
-<tr class='winner'><td>2</td><td><span class='player-link' onclick="showPlayer('Olly Talbot')">Olly Talbot 🥈</span></td><td>18.0</td><td>None</td><td>None</td><td>40</td><td>🥈</td></tr>
-<tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('John Hall')">John Hall 🥉</span></td><td>24.0</td><td>None</td><td>None</td><td>38</td><td>🥉</td></tr>
-<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>4</td><td><span class='player-link' onclick="showPlayer('Gary Walker')">Gary Walker</span></td><td>16.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
-<tr class=''><td>5</td><td><span class='player-link' onclick="showPlayer('Stephen Smith')">Stephen Smith</span></td><td>16.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>6</td><td><span class='player-link' onclick="showPlayer('Doug Costello')">Doug Costello</span></td><td>16.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
-<tr class=''><td>7</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne</span></td><td>12.0</td><td>None</td><td>None</td><td>37</td><td></td></tr>
-<tr class=''><td>8</td><td><span class='player-link' onclick="showPlayer('Mark Drake')">Mark Drake</span></td><td>13.0</td><td>None</td><td>None</td><td>36</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>9</td><td><span class='player-link' onclick="showPlayer('Vincent Cooper')">Vincent Cooper</span></td><td>20.0</td><td>None</td><td>None</td><td>36</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 10: 7 🫣 Might need a drink after that one"><td>10</td><td><span class='player-link' onclick="showPlayer('Steve Rapley')">Steve Rapley</span></td><td>10.0</td><td>None</td><td>None</td><td>35</td><td></td></tr>
-<tr class=''><td>11</td><td><span class='player-link' onclick="showPlayer('Ben Costello')">Ben Costello</span></td><td>20.0</td><td>None</td><td>None</td><td>35</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>12</td><td><span class='player-link' onclick="showPlayer('David Stas')">David Stas</span></td><td>25.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>13</td><td><span class='player-link' onclick="showPlayer('Stuart Dobbs')">Stuart Dobbs</span></td><td>21.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>14</td><td><span class='player-link' onclick="showPlayer('Craig Fisher')">Craig Fisher</span></td><td>17.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 16: 7 🫣 Might need a drink after that one"><td>15</td><td><span class='player-link' onclick="showPlayer('John Wells')">John Wells</span></td><td>13.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class=''><td>16</td><td><span class='player-link' onclick="showPlayer('Keith Dunne')">Keith Dunne</span></td><td>19.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class=''><td>17</td><td><span class='player-link' onclick="showPlayer('Gareth Sparrowhawk')">Gareth Sparrowhawk</span></td><td>18.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>18</td><td><span class='player-link' onclick="showPlayer('Fredy Da-Silva')">Fredy Da-Silva</span></td><td>28.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>19</td><td><span class='player-link' onclick="showPlayer('William White')">William White</span></td><td>23.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>20</td><td><span class='player-link' onclick="showPlayer('William Foley')">William Foley</span></td><td>21.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>21</td><td><span class='player-link' onclick="showPlayer('Wayne Talbot')">Wayne Talbot</span></td><td>8.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>22</td><td><span class='player-link' onclick="showPlayer('Nicholas Parkinson')">Nicholas Parkinson</span></td><td>19.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>23</td><td><span class='player-link' onclick="showPlayer('John Soanes')">John Soanes</span></td><td>21.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>24</td><td><span class='player-link' onclick="showPlayer('Richard Hall')">Richard Hall</span></td><td>23.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class=''><td>25</td><td><span class='player-link' onclick="showPlayer('Mark Grootz')">Mark Grootz</span></td><td>1.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class=''><td>26</td><td><span class='player-link' onclick="showPlayer('Lee Fuller')">Lee Fuller</span></td><td>4.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>27</td><td><span class='player-link' onclick="showPlayer('Ben Goodenough')">Ben Goodenough</span></td><td>24.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>28</td><td><span class='player-link' onclick="showPlayer('Oscar Eltham')">Oscar Eltham</span></td><td>16.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>29</td><td><span class='player-link' onclick="showPlayer('David JM Bolton')">David JM Bolton</span></td><td>8.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 16: 8 😬 We’ve all been there…"><td>30</td><td><span class='player-link' onclick="showPlayer('Iain Shelley')">Iain Shelley</span></td><td>20.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 8 😬 We’ve all been there…"><td>31</td><td><span class='player-link' onclick="showPlayer('Steven Chandler')">Steven Chandler</span></td><td>17.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class=''><td>32</td><td><span class='player-link' onclick="showPlayer('Peter Cosford')">Peter Cosford</span></td><td>9.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class=''><td>33</td><td><span class='player-link' onclick="showPlayer('Nathan Hamilton')">Nathan Hamilton</span></td><td>17.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class=''><td>34</td><td><span class='player-link' onclick="showPlayer('Harry Griffiths')">Harry Griffiths</span></td><td>8.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 8: 7 🫣 Might need a drink after that one"><td>35</td><td><span class='player-link' onclick="showPlayer('Ian Wynn')">Ian Wynn</span></td><td>19.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class=''><td>36</td><td><span class='player-link' onclick="showPlayer('Glyn Jones')">Glyn Jones</span></td><td>15.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class=''><td>37</td><td><span class='player-link' onclick="showPlayer('Mark Roberts')">Mark Roberts</span></td><td>14.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>38</td><td><span class='player-link' onclick="showPlayer('Philip Cole')">Philip Cole</span></td><td>16.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class=''><td>39</td><td><span class='player-link' onclick="showPlayer('David Beaven')">David Beaven</span></td><td>10.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class=''><td>40</td><td><span class='player-link' onclick="showPlayer('John Roper')">John Roper</span></td><td>9.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>41</td><td><span class='player-link' onclick="showPlayer('Mark Beecham')">Mark Beecham</span></td><td>20.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>42</td><td><span class='player-link' onclick="showPlayer('Philip Stevenson')">Philip Stevenson</span></td><td>24.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 6: 7 🫣 Might need a drink after that one"><td>43</td><td><span class='player-link' onclick="showPlayer('Alex Barber')">Alex Barber</span></td><td>14.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class=''><td>44</td><td><span class='player-link' onclick="showPlayer('Steven Pryor')">Steven Pryor</span></td><td>11.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>45</td><td><span class='player-link' onclick="showPlayer('Anthony O'Donovan')">Anthony O'Donovan</span></td><td>19.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>46</td><td><span class='player-link' onclick="showPlayer('Ian Langley')">Ian Langley</span></td><td>21.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>47</td><td><span class='player-link' onclick="showPlayer('David Suggett')">David Suggett</span></td><td>24.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class=''><td>48</td><td><span class='player-link' onclick="showPlayer('Darren Cadman')">Darren Cadman</span></td><td>11.0</td><td>None</td><td>None</td><td>28</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>49</td><td><span class='player-link' onclick="showPlayer('John Parsons')">John Parsons</span></td><td>19.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>50</td><td><span class='player-link' onclick="showPlayer('Darren Adams')">Darren Adams</span></td><td>23.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>51</td><td><span class='player-link' onclick="showPlayer('Peter Wilkinson')">Peter Wilkinson</span></td><td>9.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 10: 7 🫣 Might need a drink after that one"><td>52</td><td><span class='player-link' onclick="showPlayer('Glyn Hall')">Glyn Hall</span></td><td>23.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 6: 7 🫣 Might need a drink after that one"><td>53</td><td><span class='player-link' onclick="showPlayer('David Major')">David Major</span></td><td>18.0</td><td>None</td><td>None</td><td>26</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 10: 7 🫣 Might need a drink after that one"><td>54</td><td><span class='player-link' onclick="showPlayer('Ady Crook')">Ady Crook</span></td><td>13.0</td><td>None</td><td>None</td><td>26</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 9 😬 We’ve all been there…"><td>55</td><td><span class='player-link' onclick="showPlayer('Darren Brooks')">Darren Brooks</span></td><td>8.0</td><td>None</td><td>None</td><td>26</td><td></td></tr>
-<tr class=''><td>56</td><td><span class='player-link' onclick="showPlayer('Mark Brokenshire')">Mark Brokenshire</span></td><td>12.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>57</td><td><span class='player-link' onclick="showPlayer('Mike Mullins')">Mike Mullins</span></td><td>18.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>58</td><td><span class='player-link' onclick="showPlayer('Don Law')">Don Law</span></td><td>16.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
-<tr class=''><td>59</td><td><span class='player-link' onclick="showPlayer('Lee Binaccioni')">Lee Binaccioni</span></td><td>14.0</td><td>None</td><td>None</td><td>24</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>60</td><td><span class='player-link' onclick="showPlayer('Gary Bumpass')">Gary Bumpass</span></td><td>12.0</td><td>None</td><td>None</td><td>22</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>61</td><td><span class='player-link' onclick="showPlayer('Simon Griffiths')">Simon Griffiths</span></td><td>18.0</td><td>None</td><td>None</td><td>21</td><td></td></tr></tbody>
-</table>
-</div><div class="card">
-<h2>🏌️ Div 1 (hcp 1–12)</h2>
-<table>
-<thead><tr><th>Pos</th><th>Player</th><th>Nett</th><th>Stableford</th></tr></thead>
-<tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne 🥇</span></td><td>12.0</td><td>None</td><td>None</td><td>37</td><td>🥇</td></tr>
-<tr class='winner' class="tooltip" data-tip="Hole 10: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('Steve Rapley')">Steve Rapley 🥈</span></td><td>10.0</td><td>None</td><td>None</td><td>35</td><td>🥈</td></tr>
-<tr class='winner' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>3</td><td><span class='player-link' onclick="showPlayer('Wayne Talbot')">Wayne Talbot 🥉</span></td><td>8.0</td><td>None</td><td>None</td><td>33</td><td>🥉</td></tr>
-<tr class=''><td>4</td><td><span class='player-link' onclick="showPlayer('Mark Grootz')">Mark Grootz</span></td><td>1.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class=''><td>5</td><td><span class='player-link' onclick="showPlayer('Lee Fuller')">Lee Fuller</span></td><td>4.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>6</td><td><span class='player-link' onclick="showPlayer('David JM Bolton')">David JM Bolton</span></td><td>8.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class=''><td>7</td><td><span class='player-link' onclick="showPlayer('Peter Cosford')">Peter Cosford</span></td><td>9.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class=''><td>8</td><td><span class='player-link' onclick="showPlayer('Harry Griffiths')">Harry Griffiths</span></td><td>8.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class=''><td>9</td><td><span class='player-link' onclick="showPlayer('David Beaven')">David Beaven</span></td><td>10.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class=''><td>10</td><td><span class='player-link' onclick="showPlayer('John Roper')">John Roper</span></td><td>9.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class=''><td>11</td><td><span class='player-link' onclick="showPlayer('Steven Pryor')">Steven Pryor</span></td><td>11.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class=''><td>12</td><td><span class='player-link' onclick="showPlayer('Darren Cadman')">Darren Cadman</span></td><td>11.0</td><td>None</td><td>None</td><td>28</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>13</td><td><span class='player-link' onclick="showPlayer('Peter Wilkinson')">Peter Wilkinson</span></td><td>9.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 9 😬 We’ve all been there…"><td>14</td><td><span class='player-link' onclick="showPlayer('Darren Brooks')">Darren Brooks</span></td><td>8.0</td><td>None</td><td>None</td><td>26</td><td></td></tr>
-<tr class=''><td>15</td><td><span class='player-link' onclick="showPlayer('Mark Brokenshire')">Mark Brokenshire</span></td><td>12.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>16</td><td><span class='player-link' onclick="showPlayer('Gary Bumpass')">Gary Bumpass</span></td><td>12.0</td><td>None</td><td>None</td><td>22</td><td></td></tr></tbody>
-</table>
-</div><div class="card">
-<h2>🏌️ Div 2 (hcp 13+ – The Choppers)</h2>
-<table>
-<thead><tr><th>Pos</th><th>Player</th><th>Nett</th><th>Stableford</th></tr></thead>
-<tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Richard Lyons')">Richard Lyons 🥇</span></td><td>15.0</td><td>None</td><td>None</td><td>40</td><td>🥇</td></tr>
-<tr class='winner'><td>2</td><td><span class='player-link' onclick="showPlayer('Olly Talbot')">Olly Talbot 🥈</span></td><td>18.0</td><td>None</td><td>None</td><td>40</td><td>🥈</td></tr>
-<tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('John Hall')">John Hall 🥉</span></td><td>24.0</td><td>None</td><td>None</td><td>38</td><td>🥉</td></tr>
-<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>4</td><td><span class='player-link' onclick="showPlayer('Gary Walker')">Gary Walker</span></td><td>16.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
-<tr class=''><td>5</td><td><span class='player-link' onclick="showPlayer('Stephen Smith')">Stephen Smith</span></td><td>16.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>6</td><td><span class='player-link' onclick="showPlayer('Doug Costello')">Doug Costello</span></td><td>16.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
-<tr class=''><td>7</td><td><span class='player-link' onclick="showPlayer('Mark Drake')">Mark Drake</span></td><td>13.0</td><td>None</td><td>None</td><td>36</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>8</td><td><span class='player-link' onclick="showPlayer('Vincent Cooper')">Vincent Cooper</span></td><td>20.0</td><td>None</td><td>None</td><td>36</td><td></td></tr>
-<tr class=''><td>9</td><td><span class='player-link' onclick="showPlayer('Ben Costello')">Ben Costello</span></td><td>20.0</td><td>None</td><td>None</td><td>35</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>10</td><td><span class='player-link' onclick="showPlayer('David Stas')">David Stas</span></td><td>25.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>11</td><td><span class='player-link' onclick="showPlayer('Stuart Dobbs')">Stuart Dobbs</span></td><td>21.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>12</td><td><span class='player-link' onclick="showPlayer('Craig Fisher')">Craig Fisher</span></td><td>17.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 16: 7 🫣 Might need a drink after that one"><td>13</td><td><span class='player-link' onclick="showPlayer('John Wells')">John Wells</span></td><td>13.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class=''><td>14</td><td><span class='player-link' onclick="showPlayer('Keith Dunne')">Keith Dunne</span></td><td>19.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class=''><td>15</td><td><span class='player-link' onclick="showPlayer('Gareth Sparrowhawk')">Gareth Sparrowhawk</span></td><td>18.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>16</td><td><span class='player-link' onclick="showPlayer('Fredy Da-Silva')">Fredy Da-Silva</span></td><td>28.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>17</td><td><span class='player-link' onclick="showPlayer('William White')">William White</span></td><td>23.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>18</td><td><span class='player-link' onclick="showPlayer('William Foley')">William Foley</span></td><td>21.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>19</td><td><span class='player-link' onclick="showPlayer('Nicholas Parkinson')">Nicholas Parkinson</span></td><td>19.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>20</td><td><span class='player-link' onclick="showPlayer('John Soanes')">John Soanes</span></td><td>21.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>21</td><td><span class='player-link' onclick="showPlayer('Richard Hall')">Richard Hall</span></td><td>23.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>22</td><td><span class='player-link' onclick="showPlayer('Ben Goodenough')">Ben Goodenough</span></td><td>24.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>23</td><td><span class='player-link' onclick="showPlayer('Oscar Eltham')">Oscar Eltham</span></td><td>16.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 16: 8 😬 We’ve all been there…"><td>24</td><td><span class='player-link' onclick="showPlayer('Iain Shelley')">Iain Shelley</span></td><td>20.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 8 😬 We’ve all been there…"><td>25</td><td><span class='player-link' onclick="showPlayer('Steven Chandler')">Steven Chandler</span></td><td>17.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class=''><td>26</td><td><span class='player-link' onclick="showPlayer('Nathan Hamilton')">Nathan Hamilton</span></td><td>17.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 8: 7 🫣 Might need a drink after that one"><td>27</td><td><span class='player-link' onclick="showPlayer('Ian Wynn')">Ian Wynn</span></td><td>19.0</td><td>None</td><td>None</td><td>31</td><td></td></tr>
-<tr class=''><td>28</td><td><span class='player-link' onclick="showPlayer('Glyn Jones')">Glyn Jones</span></td><td>15.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class=''><td>29</td><td><span class='player-link' onclick="showPlayer('Mark Roberts')">Mark Roberts</span></td><td>14.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>30</td><td><span class='player-link' onclick="showPlayer('Philip Cole')">Philip Cole</span></td><td>16.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>31</td><td><span class='player-link' onclick="showPlayer('Mark Beecham')">Mark Beecham</span></td><td>20.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>32</td><td><span class='player-link' onclick="showPlayer('Philip Stevenson')">Philip Stevenson</span></td><td>24.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 6: 7 🫣 Might need a drink after that one"><td>33</td><td><span class='player-link' onclick="showPlayer('Alex Barber')">Alex Barber</span></td><td>14.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>34</td><td><span class='player-link' onclick="showPlayer('Anthony O'Donovan')">Anthony O'Donovan</span></td><td>19.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>35</td><td><span class='player-link' onclick="showPlayer('Ian Langley')">Ian Langley</span></td><td>21.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>36</td><td><span class='player-link' onclick="showPlayer('David Suggett')">David Suggett</span></td><td>24.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>37</td><td><span class='player-link' onclick="showPlayer('John Parsons')">John Parsons</span></td><td>19.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>38</td><td><span class='player-link' onclick="showPlayer('Darren Adams')">Darren Adams</span></td><td>23.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 10: 7 🫣 Might need a drink after that one"><td>39</td><td><span class='player-link' onclick="showPlayer('Glyn Hall')">Glyn Hall</span></td><td>23.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 6: 7 🫣 Might need a drink after that one"><td>40</td><td><span class='player-link' onclick="showPlayer('David Major')">David Major</span></td><td>18.0</td><td>None</td><td>None</td><td>26</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 10: 7 🫣 Might need a drink after that one"><td>41</td><td><span class='player-link' onclick="showPlayer('Ady Crook')">Ady Crook</span></td><td>13.0</td><td>None</td><td>None</td><td>26</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>42</td><td><span class='player-link' onclick="showPlayer('Mike Mullins')">Mike Mullins</span></td><td>18.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>43</td><td><span class='player-link' onclick="showPlayer('Don Law')">Don Law</span></td><td>16.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
-<tr class=''><td>44</td><td><span class='player-link' onclick="showPlayer('Lee Binaccioni')">Lee Binaccioni</span></td><td>14.0</td><td>None</td><td>None</td><td>24</td><td></td></tr>
-<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>45</td><td><span class='player-link' onclick="showPlayer('Simon Griffiths')">Simon Griffiths</span></td><td>18.0</td><td>None</td><td>None</td><td>21</td><td></td></tr></tbody>
-</table>
-</div></div><div style="flex: 1 1 300px; max-width: 500px;"><div class="card">
-<h2>🥇 Winner's Circle</h2>
-<ul><li>- Richard Lyons stormed ahead with 40 points.</li>
-<li>- Olly Talbot came to play and walked away with 40.</li>
-<li>- John Hall barely broke a sweat on the way to 38.</li></ul>
-</div><div class="card">
-<h2>🏅 Special Mentions</h2>
-<ul><li>💩 Worst Hole of the Week: Hole 12 - David Stas scored 9</li>
-<li>🌟 Best Hole of the Week: Hole 7 - Craig Fisher scored 2</li>
-<li>🐦 **Birdie Barrage**: Mark Grootz with 5 birdies</li>
-<li>🟰 **Par Machine**: Lee Fuller with 9 pars</li>
-<li>👹 **Bogey Monster**: Steven Pryor with a streak of 6 bogeys</li>
-<li>🔁 **Mr. Consistent**: Peter Wilkinson with 4 consecutive pars</li>
-<li>🎢 **Rollercoaster Award**: David Stas with a 6 point swing between holes</li>
-<li>💣 **Blobmeister**: Fredy Da-Silva with 4 blobs (8+, 0s, or NRs)</li>
-<li>🦅 **Eagle Eyed**: Alex Barber bagged an eagle on hole 1!</li>
-<li>💪 **Conquered the Beast**: Steve Rapley tamed the hardest hole (SI 1) with a 4</li>
-<li>🫣 **Bottled the Bunny**: John Soanes blew the easiest hole (SI 18) with a 8</li>
-<li>🧱 **Brick Wall**: Mark Drake went 18 holes without a blow-up</li>
-<li>📉 **Implosion**: Glyn Hall crumbled on the back 9 (18 shots worse!)</li>
-<li>🔒 **Locked-In Early**: Ben Costello opened with 5 on holes 1-3</li>
-<li>🔥 **Hot Finish**: David Beaven finished strong with 3 on 16–18</li>
-<li>🐌 **Slow Burner**: David Stas took 20 to get going on holes 1–3</li>
-<li>🍕 **Snack Break Needed**: Fredy Da-Silva had 4 back-to-back 7+ scores</li>
-<li>🥴 **Mr. Inconsistent**: David Stas ranged 6 shots between best & worst hole</li>
-<li>🛠 **The Grinder**: Gary Walker made 8 pars without a single birdie</li>
-<li>🧨 **Bomb Hole Bandit**: John Roper mastered the bomb holes (11 & 12) with 4</li>
-<li>📞 **On Hold Champion**: John Wells kept cool on 9 and still scored 3</li>
-<li>🛞 **Corner Cutter**: David Stas took on the 10th and it paid off – 3!</li>
-<li>🛞 **Corner Cutter**: Richard Lyons took on the 10th and it paid off – 3!</li>
-<li>🚫 **Safety First**: Mark Drake played it smart on 2 & 8 with no trouble</li>
-<li>🪦 **OB Survivor**: Stuart Dobbs kept it clean on OB holes: 2</li>
-<li>😤 **Sixteen Slayer**: Philip Cole conquered the toughest hole with a 4</li></ul>
-</div><div class="card">
-<h2>🍔 Fat Mates</h2>
-<ul><li>No fat mates this week.</li></ul>
-</div><div class="card">
-<h2>📊 Stats Summary</h2>
-<ul><li>- Avg Gross: - | Avg Nett: - | Avg Stableford: 31.2</li>
-<li>- Total Players: 61</li>
-<li>- Most Generous Hole: Hole 7 (Avg 3.23 Stableford points)</li>
-<li>- Blow-Up Hole: Hole 12 (6 blobs, Avg 6.2 strokes)</li>
-<li>- Most Consistent: David Beaven (2-shot variance)</li></ul>
-</div></div></div>
-<!-- 🏌️ Leaderboards at the top -->
-<!-- Summary and extras -->
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const scoreData = [{"label": "21", "count": 1}, {"label": "22", "count": 1}, {"label": "24", "count": 1}, {"label": "25", "count": 3}, {"label": "26", "count": 3}, {"label": "27", "count": 4}, {"label": "28", "count": 1}, {"label": "29", "count": 5}, {"label": "30", "count": 7}, {"label": "31", "count": 6}, {"label": "32", "count": 7}, {"label": "33", "count": 5}, {"label": "34", "count": 6}, {"label": "35", "count": 2}, {"label": "36", "count": 2}, {"label": "37", "count": 1}, {"label": "38", "count": 4}, {"label": "40", "count": 2}];
-      const holeAverages = [{"hole": "H1", "avg": 1.46}, {"hole": "H2", "avg": 2.57}, {"hole": "H3", "avg": 1.77}, {"hole": "H4", "avg": 2.07}, {"hole": "H5", "avg": 2.14}, {"hole": "H6", "avg": 1.93}, {"hole": "H7", "avg": 3.23}, {"hole": "H8", "avg": 2.23}, {"hole": "H9", "avg": 2.92}, {"hole": "H10", "avg": 1.7}, {"hole": "H11", "avg": 1.77}, {"hole": "H12", "avg": 0.78}, {"hole": "H13", "avg": 1.25}, {"hole": "H14", "avg": 2.66}, {"hole": "H15", "avg": 1.46}, {"hole": "H16", "avg": 1.25}, {"hole": "H17", "avg": 2.65}, {"hole": "H18", "avg": 0.68}];
-
-      if (document.getElementById("scoreChart")) {
-        new Chart(document.getElementById("scoreChart"), {
-          type: 'bar',
-          data: {
-            labels: scoreData.map(e => e.label),
-            datasets: [{
-              label: 'Players',
-              data: scoreData.map(e => e.count),
-              backgroundColor: '#42a5f5'
-            }]
-          },
-          options: { responsive: true, plugins: { legend: { display: false } } }
-        });
-      }
-
-      if (document.getElementById("holeChart")) {
-        new Chart(document.getElementById("holeChart"), {
-          type: 'line',
-          data: {
-            labels: holeAverages.map(e => e.hole),
-            datasets: [{
-              label: 'Avg Stableford',
-              data: holeAverages.map(e => e.avg),
-              fill: false,
-              borderColor: '#66bb6a',
-              tension: 0.2
-            }]
-          },
-          options: { responsive: true }
-        });
-      }
-
-      const shownPopovers = {};
-
-      window.showPlayer = function(name) {
-        const id = `popover-${name.replace(/ /g, "_").replace(/'/g, "")}`;
-        const pop = document.getElementById(id);
-        if (!pop) return;
-
-        for (const key in shownPopovers) {
-          if (shownPopovers[key]) {
-            shownPopovers[key].style.display = "none";
-            shownPopovers[key] = null;
-          }
-        }
-
-        pop.style.display = "block";
-        shownPopovers[name] = pop;
-      };
-
-      window.hidePopover = function(name) {
-        const id = `popover-${name.replace(/ /g, "_").replace(/'/g, "")}`;
-        const pop = document.getElementById(id);
-        if (pop) {
-          pop.style.display = "none";
-          shownPopovers[name] = null;
-        }
-      };
-      window.hidePopoverByElement = function(el) {
-        const name = el.getAttribute("data-name");
-        hidePopover(name);
-      };
-      window.addEventListener("click", (e) => {
-        const isPopover = e.target.closest(".player-popover");
-        const isLink = e.target.classList.contains("player-link");
-        if (!isPopover && !isLink) {
-          for (const key in shownPopovers) {
-            if (shownPopovers[key]) {
-              shownPopovers[key].style.display = "none";
-              shownPopovers[key] = null;
-            }
-          }
-        }
-      });
-    });
-  </script>
-<!-- 👤 All player popups rendered here -->
-  
-            <div id="popover-Alex_Barber" class="player-popover">
-            <div class="close-btn" data-name="Alex_Barber" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Alex Barber</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>7</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🦅 **Eagle Eyed**: Alex Barber bagged an eagle on hole 1!</li></ul>
+  <h1>🏌️ Men's Monthly Stableford April #3 2025 — Thursday 24 April 2025</h1>
+  <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+    <div class="chart-container">
+      <h3>Score Distribution</h3>
+      <canvas id="scoreChart"></canvas>
     </div>
-    
+    <div class="chart-container">
+      <h3>Average Stableford by Hole</h3>
+      <canvas id="holeChart"></canvas>
+    </div>
+  </div>
 
-            <div id="popover-Mark_Drake" class="player-popover">
-            <div class="close-btn" data-name="Mark_Drake" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Mark Drake</h3>
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+    <div style="flex: 2 1 600px;">
+      <div class="card">
+        <h2>🏅 Overall Leaderboard</h2>
+        <table>
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
+          <tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Ramesh Aryal')">Ramesh Aryal 🥇</span></td><td>16.0</td><td>None</td><td>None</td><td>42</td><td>🥇</td></tr>
+<tr class='winner' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('Martin Cox-Rogers')">Martin Cox-Rogers 🥈</span></td><td>33.0</td><td>None</td><td>None</td><td>42</td><td>🥈</td></tr>
+<tr class='winner'><td>3</td><td><span class='player-link' onclick="showPlayer('Tim Brown')">Tim Brown 🥉</span></td><td>17.0</td><td>None</td><td>None</td><td>40</td><td>🥉</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 5: 8 😬 We’ve all been there…"><td>4</td><td><span class='player-link' onclick="showPlayer('Keith Dunne')">Keith Dunne</span></td><td>20.0</td><td>None</td><td>None</td><td>39</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>5</td><td><span class='player-link' onclick="showPlayer('James Penney')">James Penney</span></td><td>25.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>6</td><td><span class='player-link' onclick="showPlayer('Mark Drake')">Mark Drake</span></td><td>13.0</td><td>None</td><td>None</td><td>37</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>7</td><td><span class='player-link' onclick="showPlayer('Jason Taylor')">Jason Taylor</span></td><td>22.0</td><td>None</td><td>None</td><td>37</td><td></td></tr>
+<tr class=''><td>8</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne</span></td><td>12.0</td><td>None</td><td>None</td><td>36</td><td></td></tr>
+<tr class=''><td>9</td><td><span class='player-link' onclick="showPlayer('Paul King')">Paul King</span></td><td>23.0</td><td>None</td><td>None</td><td>36</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>10</td><td><span class='player-link' onclick="showPlayer('Trevor Briggs')">Trevor Briggs</span></td><td>19.0</td><td>None</td><td>None</td><td>36</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>11</td><td><span class='player-link' onclick="showPlayer('Robert Kelly')">Robert Kelly</span></td><td>16.0</td><td>None</td><td>None</td><td>35</td><td></td></tr>
+<tr class=''><td>12</td><td><span class='player-link' onclick="showPlayer('Stephen Slater')">Stephen Slater</span></td><td>25.0</td><td>None</td><td>None</td><td>35</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>13</td><td><span class='player-link' onclick="showPlayer('Vincent Cooper')">Vincent Cooper</span></td><td>20.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>14</td><td><span class='player-link' onclick="showPlayer('John Wells')">John Wells</span></td><td>13.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>15</td><td><span class='player-link' onclick="showPlayer('Martin Whitaker')">Martin Whitaker</span></td><td>5.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>16</td><td><span class='player-link' onclick="showPlayer('Stuart Dobbs')">Stuart Dobbs</span></td><td>21.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>17</td><td><span class='player-link' onclick="showPlayer('Nigel Cook')">Nigel Cook</span></td><td>12.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>18</td><td><span class='player-link' onclick="showPlayer('William White')">William White</span></td><td>23.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
+<tr class=''><td>19</td><td><span class='player-link' onclick="showPlayer('David JM Bolton')">David JM Bolton</span></td><td>8.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
+<tr class=''><td>20</td><td><span class='player-link' onclick="showPlayer('Craig Fisher')">Craig Fisher</span></td><td>17.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 17: 2 🌟 Did someone say birdie (or eagle)?"><td>21</td><td><span class='player-link' onclick="showPlayer('Rodney O'Donovan')">Rodney O'Donovan</span></td><td>3.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>22</td><td><span class='player-link' onclick="showPlayer('Oliver Wilson')">Oliver Wilson</span></td><td>11.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>23</td><td><span class='player-link' onclick="showPlayer('John Soanes')">John Soanes</span></td><td>21.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
+<tr class=''><td>24</td><td><span class='player-link' onclick="showPlayer('Gordon Bates')">Gordon Bates</span></td><td>14.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
+<tr class=''><td>25</td><td><span class='player-link' onclick="showPlayer('Matthew Cox')">Matthew Cox</span></td><td>11.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>26</td><td><span class='player-link' onclick="showPlayer('Marcus Bird-Newell')">Marcus Bird-Newell</span></td><td>19.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>27</td><td><span class='player-link' onclick="showPlayer('Joe Butler')">Joe Butler</span></td><td>9.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
+<tr class=''><td>28</td><td><span class='player-link' onclick="showPlayer('Gary Walker')">Gary Walker</span></td><td>15.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>29</td><td><span class='player-link' onclick="showPlayer('William Gilogley')">William Gilogley</span></td><td>19.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 8 😬 We’ve all been there…"><td>30</td><td><span class='player-link' onclick="showPlayer('Ady Crook')">Ady Crook</span></td><td>13.0</td><td>None</td><td>None</td><td>28</td><td></td></tr>
+<tr class=''><td>31</td><td><span class='player-link' onclick="showPlayer('Michael Cooper')">Michael Cooper</span></td><td>8.0</td><td>None</td><td>None</td><td>28</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>32</td><td><span class='player-link' onclick="showPlayer('Steve Rapley')">Steve Rapley</span></td><td>10.0</td><td>None</td><td>None</td><td>28</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>33</td><td><span class='player-link' onclick="showPlayer('Gary Coupar')">Gary Coupar</span></td><td>20.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 15: 7 🫣 Might need a drink after that one"><td>34</td><td><span class='player-link' onclick="showPlayer('Nick Kilbee')">Nick Kilbee</span></td><td>20.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 8 😬 We’ve all been there…"><td>35</td><td><span class='player-link' onclick="showPlayer('David Worrall')">David Worrall</span></td><td>20.0</td><td>None</td><td>None</td><td>26</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>36</td><td><span class='player-link' onclick="showPlayer('Barry Carter')">Barry Carter</span></td><td>6.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>37</td><td><span class='player-link' onclick="showPlayer('William Foley')">William Foley</span></td><td>21.0</td><td>None</td><td>None</td><td>24</td><td></td></tr>
+<tr class=''><td>38</td><td><span class='player-link' onclick="showPlayer('Ben Robert Richardson')">Ben Robert Richardson</span></td><td>9.0</td><td>None</td><td>None</td><td>24</td><td></td></tr></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🏅 Div 1 (hcp 1–12)</h2>
+        <table>
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
+          <tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne 🥇</span></td><td>12.0</td><td>None</td><td>None</td><td>36</td><td>🥇</td></tr>
+<tr class='winner' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('Martin Whitaker')">Martin Whitaker 🥈</span></td><td>5.0</td><td>None</td><td>None</td><td>34</td><td>🥈</td></tr>
+<tr class='winner' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Nigel Cook')">Nigel Cook 🥉</span></td><td>12.0</td><td>None</td><td>None</td><td>33</td><td>🥉</td></tr>
+<tr class=''><td>4</td><td><span class='player-link' onclick="showPlayer('David JM Bolton')">David JM Bolton</span></td><td>8.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 17: 2 🌟 Did someone say birdie (or eagle)?"><td>5</td><td><span class='player-link' onclick="showPlayer('Rodney O'Donovan')">Rodney O'Donovan</span></td><td>3.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>6</td><td><span class='player-link' onclick="showPlayer('Oliver Wilson')">Oliver Wilson</span></td><td>11.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
+<tr class=''><td>7</td><td><span class='player-link' onclick="showPlayer('Matthew Cox')">Matthew Cox</span></td><td>11.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>8</td><td><span class='player-link' onclick="showPlayer('Joe Butler')">Joe Butler</span></td><td>9.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
+<tr class=''><td>9</td><td><span class='player-link' onclick="showPlayer('Michael Cooper')">Michael Cooper</span></td><td>8.0</td><td>None</td><td>None</td><td>28</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>10</td><td><span class='player-link' onclick="showPlayer('Steve Rapley')">Steve Rapley</span></td><td>10.0</td><td>None</td><td>None</td><td>28</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>11</td><td><span class='player-link' onclick="showPlayer('Barry Carter')">Barry Carter</span></td><td>6.0</td><td>None</td><td>None</td><td>25</td><td></td></tr>
+<tr class=''><td>12</td><td><span class='player-link' onclick="showPlayer('Ben Robert Richardson')">Ben Robert Richardson</span></td><td>9.0</td><td>None</td><td>None</td><td>24</td><td></td></tr></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🏅 Div 2 (hcp 13+ – The Choppers)</h2>
+        <table>
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
+          <tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Ramesh Aryal')">Ramesh Aryal 🥇</span></td><td>16.0</td><td>None</td><td>None</td><td>42</td><td>🥇</td></tr>
+<tr class='winner' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('Martin Cox-Rogers')">Martin Cox-Rogers 🥈</span></td><td>33.0</td><td>None</td><td>None</td><td>42</td><td>🥈</td></tr>
+<tr class='winner'><td>3</td><td><span class='player-link' onclick="showPlayer('Tim Brown')">Tim Brown 🥉</span></td><td>17.0</td><td>None</td><td>None</td><td>40</td><td>🥉</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 5: 8 😬 We’ve all been there…"><td>4</td><td><span class='player-link' onclick="showPlayer('Keith Dunne')">Keith Dunne</span></td><td>20.0</td><td>None</td><td>None</td><td>39</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>5</td><td><span class='player-link' onclick="showPlayer('James Penney')">James Penney</span></td><td>25.0</td><td>None</td><td>None</td><td>38</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>6</td><td><span class='player-link' onclick="showPlayer('Mark Drake')">Mark Drake</span></td><td>13.0</td><td>None</td><td>None</td><td>37</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>7</td><td><span class='player-link' onclick="showPlayer('Jason Taylor')">Jason Taylor</span></td><td>22.0</td><td>None</td><td>None</td><td>37</td><td></td></tr>
+<tr class=''><td>8</td><td><span class='player-link' onclick="showPlayer('Paul King')">Paul King</span></td><td>23.0</td><td>None</td><td>None</td><td>36</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>9</td><td><span class='player-link' onclick="showPlayer('Trevor Briggs')">Trevor Briggs</span></td><td>19.0</td><td>None</td><td>None</td><td>36</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>10</td><td><span class='player-link' onclick="showPlayer('Robert Kelly')">Robert Kelly</span></td><td>16.0</td><td>None</td><td>None</td><td>35</td><td></td></tr>
+<tr class=''><td>11</td><td><span class='player-link' onclick="showPlayer('Stephen Slater')">Stephen Slater</span></td><td>25.0</td><td>None</td><td>None</td><td>35</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>12</td><td><span class='player-link' onclick="showPlayer('Vincent Cooper')">Vincent Cooper</span></td><td>20.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>13</td><td><span class='player-link' onclick="showPlayer('John Wells')">John Wells</span></td><td>13.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>14</td><td><span class='player-link' onclick="showPlayer('Stuart Dobbs')">Stuart Dobbs</span></td><td>21.0</td><td>None</td><td>None</td><td>34</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>15</td><td><span class='player-link' onclick="showPlayer('William White')">William White</span></td><td>23.0</td><td>None</td><td>None</td><td>33</td><td></td></tr>
+<tr class=''><td>16</td><td><span class='player-link' onclick="showPlayer('Craig Fisher')">Craig Fisher</span></td><td>17.0</td><td>None</td><td>None</td><td>32</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>17</td><td><span class='player-link' onclick="showPlayer('John Soanes')">John Soanes</span></td><td>21.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
+<tr class=''><td>18</td><td><span class='player-link' onclick="showPlayer('Gordon Bates')">Gordon Bates</span></td><td>14.0</td><td>None</td><td>None</td><td>30</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>19</td><td><span class='player-link' onclick="showPlayer('Marcus Bird-Newell')">Marcus Bird-Newell</span></td><td>19.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
+<tr class=''><td>20</td><td><span class='player-link' onclick="showPlayer('Gary Walker')">Gary Walker</span></td><td>15.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>21</td><td><span class='player-link' onclick="showPlayer('William Gilogley')">William Gilogley</span></td><td>19.0</td><td>None</td><td>None</td><td>29</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 8 😬 We’ve all been there…"><td>22</td><td><span class='player-link' onclick="showPlayer('Ady Crook')">Ady Crook</span></td><td>13.0</td><td>None</td><td>None</td><td>28</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 4: 7 🫣 Might need a drink after that one"><td>23</td><td><span class='player-link' onclick="showPlayer('Gary Coupar')">Gary Coupar</span></td><td>20.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 15: 7 🫣 Might need a drink after that one"><td>24</td><td><span class='player-link' onclick="showPlayer('Nick Kilbee')">Nick Kilbee</span></td><td>20.0</td><td>None</td><td>None</td><td>27</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 8 😬 We’ve all been there…"><td>25</td><td><span class='player-link' onclick="showPlayer('David Worrall')">David Worrall</span></td><td>20.0</td><td>None</td><td>None</td><td>26</td><td></td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>26</td><td><span class='player-link' onclick="showPlayer('William Foley')">William Foley</span></td><td>21.0</td><td>None</td><td>None</td><td>24</td><td></td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <div style="flex: 1 1 300px; max-width: 500px;">
+      <div class="card">
+        <h2>🏆 Winner's Circle</h2>
+        <ul><li>- Ramesh Aryal stormed ahead with 42 points.</li>
+<li>- Martin Cox-Rogers came to play and walked away with 42.</li>
+<li>- Tim Brown barely broke a sweat on the way to 40.</li></ul>
+      </div>
+      <div class="card">
+        <h2>🌼 Special Mentions</h2>
+        <ul><li>💩 Worst Hole of the Week: Hole 1 - John Soanes scored 8</li>
+<li>🌟 Best Hole of the Week: Hole 7 - Mark Drake scored 2</li>
+<li>🐦 **Birdie Barrage**: Mark Drake with 3 birdies</li>
+<li>🟰 **Par Machine**: Ramesh Aryal with 10 pars</li>
+<li>👹 **Bogey Monster**: Robert Kelly with a streak of 5 bogeys</li>
+<li>🔁 **Mr. Consistent**: Ramesh Aryal with 6 consecutive pars</li>
+<li>🎢 **Rollercoaster Award**: David Worrall with a 6 point swing between holes</li>
+<li>💣 **Blobmeister**: John Soanes with 2 blobs (8+, 0s, or NRs)</li>
+<li>🦅 **Eagle Eyed**: William Foley bagged an eagle on hole 1!</li>
+<li>💪 **Conquered the Beast**: David JM Bolton tamed the hardest hole (SI 1) with a 4</li>
+<li>🫣 **Bottled the Bunny**: John Soanes blew the easiest hole (SI 18) with a 8</li>
+<li>🧱 **Brick Wall**: Ramesh Aryal went 18 holes without a blow-up</li>
+<li>📉 **Implosion**: Trevor Briggs crumbled on the back 9 (15 shots worse!)</li>
+<li>🔒 **Locked-In Early**: Ben Robert Richardson opened with 5 on holes 1-3</li>
+<li>🐌 **Slow Burner**: John Soanes took 19 to get going on holes 1–3</li>
+<li>🍕 **Snack Break Needed**: Gary Coupar had 2 back-to-back 7+ scores</li>
+<li>🥴 **Mr. Inconsistent**: David Worrall ranged 6 shots between best & worst hole</li>
+<li>🛠 **The Grinder**: Ramesh Aryal made 10 pars without a single birdie</li>
+<li>🧨 **Bomb Hole Bandit**: William Foley mastered the bomb holes (11 & 12) with 5</li>
+<li>📞 **On Hold Champion**: Keith Dunne kept cool on 9 and still scored 3</li>
+<li>🚫 **Safety First**: Ramesh Aryal played it smart on 2 & 8 with no trouble</li>
+<li>🪦 **OB Survivor**: David JM Bolton kept it clean on OB holes: 1</li>
+<li>😤 **Sixteen Slayer**: Rodney O'Donovan conquered the toughest hole with a 3</li></ul>
+      </div>
+      <div class="card">
+        <h2>🍔 Fat Mates</h2>
+        <ul><li>No fat mates this week.</li></ul>
+      </div>
+      <div class="card">
+        <h2>📊 Stats Summary</h2>
+        <ul><li>- Avg Gross: - | Avg Nett: - | Avg Stableford: 32.3</li>
+<li>- Total Players: 38</li>
+<li>- Most Generous Hole: Hole 7 (Avg 3.41 Stableford points)</li>
+<li>- Blow-Up Hole: Hole 18 (2 blobs, Avg 6.1 strokes)</li>
+<li>- Most Consistent: Ramesh Aryal (2-shot variance)</li></ul>
+      </div>
+    </div>
+  </div>
+  <!-- 👤 Player popups rendered here -->
+  
+            <div id="popover-William_Foley" class="player-popover">
+            <div class="close-btn" data-name="William_Foley" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>William Foley</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>3</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🧱 **Brick Wall**: Mark Drake went 18 holes without a blow-up</li><li>🚫 **Safety First**: Mark Drake played it smart on 2 & 8 with no trouble</li></ul>
+            <ul><li>🦅 **Eagle Eyed**: William Foley bagged an eagle on hole 1!</li><li>🧨 **Bomb Hole Bandit**: William Foley mastered the bomb holes (11 & 12) with 5</li></ul>
     </div>
     
 
@@ -510,139 +291,69 @@ th, td {
             <div class="close-btn" data-name="John_Soanes" onclick="hidePopoverByElement(this)">&times;</div>
             <h3>John Soanes</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>7</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>8</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>8</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>7</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>7</td></tr><tr><td>H11</td><td>3</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>6</td></tr><tr><td>H18</td><td>8</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🫣 **Bottled the Bunny**: John Soanes blew the easiest hole (SI 18) with a 8</li></ul>
+            <ul><li>💩 Worst Hole of the Week: Hole 1 - John Soanes scored 8</li><li>💣 **Blobmeister**: John Soanes with 2 blobs (8+, 0s, or NRs)</li><li>🫣 **Bottled the Bunny**: John Soanes blew the easiest hole (SI 18) with a 8</li><li>🐌 **Slow Burner**: John Soanes took 19 to get going on holes 1–3</li></ul>
     </div>
     
 
-            <div id="popover-Iain_Shelley" class="player-popover">
-            <div class="close-btn" data-name="Iain_Shelley" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Iain Shelley</h3>
+            <div id="popover-Marcus_Bird-Newell" class="player-popover">
+            <div class="close-btn" data-name="Marcus_Bird-Newell" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Marcus Bird-Newell</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>8</td></tr><tr><td>H17</td><td>6</td></tr><tr><td>H18</td><td>4</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-David_Stas" class="player-popover">
-            <div class="close-btn" data-name="David_Stas" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>David Stas</h3>
+            <div id="popover-Ramesh_Aryal" class="player-popover">
+            <div class="close-btn" data-name="Ramesh_Aryal" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Ramesh Aryal</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>7</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>7</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>7</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>3</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>9</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>4</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>💩 Worst Hole of the Week: Hole 12 - David Stas scored 9</li><li>🎢 **Rollercoaster Award**: David Stas with a 6 point swing between holes</li><li>🐌 **Slow Burner**: David Stas took 20 to get going on holes 1–3</li><li>🥴 **Mr. Inconsistent**: David Stas ranged 6 shots between best & worst hole</li><li>🛞 **Corner Cutter**: David Stas took on the 10th and it paid off – 3!</li></ul>
+            <ul><li>🟰 **Par Machine**: Ramesh Aryal with 10 pars</li><li>🔁 **Mr. Consistent**: Ramesh Aryal with 6 consecutive pars</li><li>🧱 **Brick Wall**: Ramesh Aryal went 18 holes without a blow-up</li><li>🛠 **The Grinder**: Ramesh Aryal made 10 pars without a single birdie</li><li>🚫 **Safety First**: Ramesh Aryal played it smart on 2 & 8 with no trouble</li></ul>
     </div>
     
 
-            <div id="popover-Richard_Hall" class="player-popover">
-            <div class="close-btn" data-name="Richard_Hall" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Richard Hall</h3>
+            <div id="popover-Mark_Drake" class="player-popover">
+            <div class="close-btn" data-name="Mark_Drake" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Mark Drake</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>8</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>2</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>2</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>4</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>🌟 Best Hole of the Week: Hole 7 - Mark Drake scored 2</li><li>🐦 **Birdie Barrage**: Mark Drake with 3 birdies</li></ul>
+    </div>
+    
+
+            <div id="popover-Gary_Coupar" class="player-popover">
+            <div class="close-btn" data-name="Gary_Coupar" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Gary Coupar</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>7</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>8</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>7</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>7</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>🍕 **Snack Break Needed**: Gary Coupar had 2 back-to-back 7+ scores</li></ul>
+    </div>
+    
+
+            <div id="popover-Nigel_Cook" class="player-popover">
+            <div class="close-btn" data-name="Nigel_Cook" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Nigel Cook</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>3</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>7</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-John_Parsons" class="player-popover">
-            <div class="close-btn" data-name="John_Parsons" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>John Parsons</h3>
+            <div id="popover-David_JM_Bolton" class="player-popover">
+            <div class="close-btn" data-name="David_JM_Bolton" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>David JM Bolton</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>7</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>7</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>4</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Steven_Chandler" class="player-popover">
-            <div class="close-btn" data-name="Steven_Chandler" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Steven Chandler</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>8</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Steven_Pryor" class="player-popover">
-            <div class="close-btn" data-name="Steven_Pryor" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Steven Pryor</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>👹 **Bogey Monster**: Steven Pryor with a streak of 6 bogeys</li></ul>
-    </div>
-    
-
-            <div id="popover-Simon_Griffiths" class="player-popover">
-            <div class="close-btn" data-name="Simon_Griffiths" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Simon Griffiths</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Mark_Grootz" class="player-popover">
-            <div class="close-btn" data-name="Mark_Grootz" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Mark Grootz</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>3</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>3</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🐦 **Birdie Barrage**: Mark Grootz with 5 birdies</li></ul>
-    </div>
-    
-
-            <div id="popover-David_Major" class="player-popover">
-            <div class="close-btn" data-name="David_Major" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>David Major</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>7</td></tr><tr><td>H7</td><td>7</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>7</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>7</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>7</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Lee_Fuller" class="player-popover">
-            <div class="close-btn" data-name="Lee_Fuller" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Lee Fuller</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>3</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🟰 **Par Machine**: Lee Fuller with 9 pars</li></ul>
-    </div>
-    
-
-            <div id="popover-Gary_Bumpass" class="player-popover">
-            <div class="close-btn" data-name="Gary_Bumpass" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Gary Bumpass</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H16</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Glyn_Jones" class="player-popover">
-            <div class="close-btn" data-name="Glyn_Jones" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Glyn Jones</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Mark_Roberts" class="player-popover">
-            <div class="close-btn" data-name="Mark_Roberts" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Mark Roberts</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
+            <ul><li>💪 **Conquered the Beast**: David JM Bolton tamed the hardest hole (SI 1) with a 4</li><li>🪦 **OB Survivor**: David JM Bolton kept it clean on OB holes: 1</li></ul>
     </div>
     
 
@@ -650,169 +361,259 @@ th, td {
             <div class="close-btn" data-name="Ady_Crook" onclick="hidePopoverByElement(this)">&times;</div>
             <h3>Ady Crook</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>7</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>8</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-Anthony_ODonovan" class="player-popover">
-            <div class="close-btn" data-name="Anthony_ODonovan" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Anthony O'Donovan</h3>
+            <div id="popover-Joe_Butler" class="player-popover">
+            <div class="close-btn" data-name="Joe_Butler" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Joe Butler</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>7</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>7</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-Philip_Cole" class="player-popover">
-            <div class="close-btn" data-name="Philip_Cole" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Philip Cole</h3>
+            <div id="popover-Cian_Dunne" class="player-popover">
+            <div class="close-btn" data-name="Cian_Dunne" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Cian Dunne</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>😤 **Sixteen Slayer**: Philip Cole conquered the toughest hole with a 4</li></ul>
-    </div>
-    
-
-            <div id="popover-Ian_Langley" class="player-popover">
-            <div class="close-btn" data-name="Ian_Langley" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Ian Langley</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>7</td></tr><tr><td>H11</td><td>7</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-Darren_Brooks" class="player-popover">
-            <div class="close-btn" data-name="Darren_Brooks" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Darren Brooks</h3>
+            <div id="popover-Keith_Dunne" class="player-popover">
+            <div class="close-btn" data-name="Keith_Dunne" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Keith Dunne</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>9</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>9</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>8</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>📞 **On Hold Champion**: Keith Dunne kept cool on 9 and still scored 3</li></ul>
+    </div>
+    
+
+            <div id="popover-Nick_Kilbee" class="player-popover">
+            <div class="close-btn" data-name="Nick_Kilbee" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Nick Kilbee</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>7</td></tr><tr><td>H17</td><td>3</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-John_Hall" class="player-popover">
-            <div class="close-btn" data-name="John_Hall" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>John Hall</h3>
+            <div id="popover-Barry_Carter" class="player-popover">
+            <div class="close-btn" data-name="Barry_Carter" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Barry Carter</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>2</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-Darren_Adams" class="player-popover">
-            <div class="close-btn" data-name="Darren_Adams" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Darren Adams</h3>
+            <div id="popover-Michael_Cooper" class="player-popover">
+            <div class="close-btn" data-name="Michael_Cooper" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Michael Cooper</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>6</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>4</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-David_Beaven" class="player-popover">
-            <div class="close-btn" data-name="David_Beaven" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>David Beaven</h3>
+            <div id="popover-Steve_Rapley" class="player-popover">
+            <div class="close-btn" data-name="Steve_Rapley" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Steve Rapley</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>3</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H17</td><td>3</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🔥 **Hot Finish**: David Beaven finished strong with 3 on 16–18</li></ul>
-    </div>
-    
-
-            <div id="popover-Richard_Lyons" class="player-popover">
-            <div class="close-btn" data-name="Richard_Lyons" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Richard Lyons</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>3</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>3</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🛞 **Corner Cutter**: Richard Lyons took on the 10th and it paid off – 3!</li></ul>
-    </div>
-    
-
-            <div id="popover-Peter_Wilkinson" class="player-popover">
-            <div class="close-btn" data-name="Peter_Wilkinson" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Peter Wilkinson</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🔁 **Mr. Consistent**: Peter Wilkinson with 4 consecutive pars</li></ul>
-    </div>
-    
-
-            <div id="popover-Darren_Cadman" class="player-popover">
-            <div class="close-btn" data-name="Darren_Cadman" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Darren Cadman</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-John_Roper" class="player-popover">
-            <div class="close-btn" data-name="John_Roper" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>John Roper</h3>
+            <div id="popover-Jason_Taylor" class="player-popover">
+            <div class="close-btn" data-name="Jason_Taylor" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Jason Taylor</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>3</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🧨 **Bomb Hole Bandit**: John Roper mastered the bomb holes (11 & 12) with 4</li></ul>
-    </div>
-    
-
-            <div id="popover-Mark_Brokenshire" class="player-popover">
-            <div class="close-btn" data-name="Mark_Brokenshire" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Mark Brokenshire</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>4</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-Peter_Cosford" class="player-popover">
-            <div class="close-btn" data-name="Peter_Cosford" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Peter Cosford</h3>
+            <div id="popover-Gary_Walker" class="player-popover">
+            <div class="close-btn" data-name="Gary_Walker" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Gary Walker</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>3</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-Lee_Binaccioni" class="player-popover">
-            <div class="close-btn" data-name="Lee_Binaccioni" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Lee Binaccioni</h3>
+            <div id="popover-Gordon_Bates" class="player-popover">
+            <div class="close-btn" data-name="Gordon_Bates" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Gordon Bates</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-Fredy_Da-Silva" class="player-popover">
-            <div class="close-btn" data-name="Fredy_Da-Silva" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Fredy Da-Silva</h3>
+            <div id="popover-Robert_Kelly" class="player-popover">
+            <div class="close-btn" data-name="Robert_Kelly" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Robert Kelly</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>8</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>7</td></tr><tr><td>H11</td><td>8</td></tr><tr><td>H12</td><td>8</td></tr><tr><td>H13</td><td>8</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>7</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>💣 **Blobmeister**: Fredy Da-Silva with 4 blobs (8+, 0s, or NRs)</li><li>🍕 **Snack Break Needed**: Fredy Da-Silva had 4 back-to-back 7+ scores</li></ul>
+            <ul><li>👹 **Bogey Monster**: Robert Kelly with a streak of 5 bogeys</li></ul>
     </div>
     
 
-            <div id="popover-Mark_Beecham" class="player-popover">
-            <div class="close-btn" data-name="Mark_Beecham" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Mark Beecham</h3>
+            <div id="popover-Vincent_Cooper" class="player-popover">
+            <div class="close-btn" data-name="Vincent_Cooper" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Vincent Cooper</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>7</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-Craig_Fisher" class="player-popover">
+            <div class="close-btn" data-name="Craig_Fisher" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Craig Fisher</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-John_Wells" class="player-popover">
+            <div class="close-btn" data-name="John_Wells" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>John Wells</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>7</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>2</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-Rodney_ODonovan" class="player-popover">
+            <div class="close-btn" data-name="Rodney_ODonovan" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Rodney O'Donovan</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>3</td></tr><tr><td>H17</td><td>2</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>😤 **Sixteen Slayer**: Rodney O'Donovan conquered the toughest hole with a 3</li></ul>
+    </div>
+    
+
+            <div id="popover-William_Gilogley" class="player-popover">
+            <div class="close-btn" data-name="William_Gilogley" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>William Gilogley</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>7</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-Stephen_Slater" class="player-popover">
+            <div class="close-btn" data-name="Stephen_Slater" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Stephen Slater</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>4</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>4</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-Martin_Cox-Rogers" class="player-popover">
+            <div class="close-btn" data-name="Martin_Cox-Rogers" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Martin Cox-Rogers</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>8</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>7</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-Martin_Whitaker" class="player-popover">
+            <div class="close-btn" data-name="Martin_Whitaker" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Martin Whitaker</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>3</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>3</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>3</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-James_Penney" class="player-popover">
+            <div class="close-btn" data-name="James_Penney" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>James Penney</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>6</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-Tim_Brown" class="player-popover">
+            <div class="close-btn" data-name="Tim_Brown" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Tim Brown</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-Paul_King" class="player-popover">
+            <div class="close-btn" data-name="Paul_King" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Paul King</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-Trevor_Briggs" class="player-popover">
+            <div class="close-btn" data-name="Trevor_Briggs" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Trevor Briggs</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>3</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H7</td><td>2</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>4</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>📉 **Implosion**: Trevor Briggs crumbled on the back 9 (15 shots worse!)</li></ul>
+    </div>
+    
+
+            <div id="popover-Matthew_Cox" class="player-popover">
+            <div class="close-btn" data-name="Matthew_Cox" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Matthew Cox</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>None</li></ul>
+    </div>
+    
+
+            <div id="popover-David_Worrall" class="player-popover">
+            <div class="close-btn" data-name="David_Worrall" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>David Worrall</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>8</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>2</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>7</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>7</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>🎢 **Rollercoaster Award**: David Worrall with a 6 point swing between holes</li><li>🥴 **Mr. Inconsistent**: David Worrall ranged 6 shots between best & worst hole</li></ul>
     </div>
     
 
@@ -832,269 +633,71 @@ th, td {
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>7</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🪦 **OB Survivor**: Stuart Dobbs kept it clean on OB holes: 2</li></ul>
-    </div>
-    
-
-            <div id="popover-Craig_Fisher" class="player-popover">
-            <div class="close-btn" data-name="Craig_Fisher" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Craig Fisher</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H7</td><td>2</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>7</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🌟 Best Hole of the Week: Hole 7 - Craig Fisher scored 2</li></ul>
-    </div>
-    
-
-            <div id="popover-John_Wells" class="player-popover">
-            <div class="close-btn" data-name="John_Wells" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>John Wells</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>7</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>📞 **On Hold Champion**: John Wells kept cool on 9 and still scored 3</li></ul>
-    </div>
-    
-
-            <div id="popover-Nathan_Hamilton" class="player-popover">
-            <div class="close-btn" data-name="Nathan_Hamilton" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Nathan Hamilton</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>3</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
 
-            <div id="popover-Vincent_Cooper" class="player-popover">
-            <div class="close-btn" data-name="Vincent_Cooper" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Vincent Cooper</h3>
+            <div id="popover-Ben_Robert_Richardson" class="player-popover">
+            <div class="close-btn" data-name="Ben_Robert_Richardson" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Ben Robert Richardson</h3>
             <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>7</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>🔒 **Locked-In Early**: Ben Robert Richardson opened with 5 on holes 1-3</li></ul>
+    </div>
+    
+
+            <div id="popover-Oliver_Wilson" class="player-popover">
+            <div class="close-btn" data-name="Oliver_Wilson" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Oliver Wilson</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H9</td><td>6</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
             <strong>Awards:</strong>
             <ul><li>None</li></ul>
     </div>
     
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scoreData = [{"label": "24", "count": 2}, {"label": "25", "count": 1}, {"label": "26", "count": 1}, {"label": "27", "count": 2}, {"label": "28", "count": 3}, {"label": "29", "count": 4}, {"label": "30", "count": 3}, {"label": "32", "count": 4}, {"label": "33", "count": 2}, {"label": "34", "count": 4}, {"label": "35", "count": 2}, {"label": "36", "count": 3}, {"label": "37", "count": 2}, {"label": "38", "count": 1}, {"label": "39", "count": 1}, {"label": "40", "count": 1}, {"label": "42", "count": 2}];
+    const holeAverages = [{"hole": "H1", "avg": 1.76}, {"hole": "H2", "avg": 2.53}, {"hole": "H3", "avg": 1.75}, {"hole": "H4", "avg": 1.78}, {"hole": "H5", "avg": 2.34}, {"hole": "H6", "avg": 2.21}, {"hole": "H7", "avg": 3.41}, {"hole": "H8", "avg": 2.12}, {"hole": "H9", "avg": 2.97}, {"hole": "H10", "avg": 1.82}, {"hole": "H11", "avg": 1.94}, {"hole": "H12", "avg": 1.16}, {"hole": "H13", "avg": 1.32}, {"hole": "H14", "avg": 2.86}, {"hole": "H15", "avg": 1.38}, {"hole": "H16", "avg": 1.39}, {"hole": "H17", "avg": 2.43}, {"hole": "H18", "avg": 0.56}];
 
-            <div id="popover-Gary_Walker" class="player-popover">
-            <div class="close-btn" data-name="Gary_Walker" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Gary Walker</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>7</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>3</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🛠 **The Grinder**: Gary Walker made 8 pars without a single birdie</li></ul>
-    </div>
-    
+    if (document.getElementById("scoreChart")) {
+      new Chart(document.getElementById("scoreChart"), {
+        type: 'bar',
+        data: {
+          labels: scoreData.map(e => e.label),
+          datasets: [{
+            label: 'Players',
+            data: scoreData.map(e => e.count),
+            backgroundColor: '#42a5f5'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
 
-            <div id="popover-Glyn_Hall" class="player-popover">
-            <div class="close-btn" data-name="Glyn_Hall" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Glyn Hall</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>7</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>8</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>📉 **Implosion**: Glyn Hall crumbled on the back 9 (18 shots worse!)</li></ul>
-    </div>
-    
-
-            <div id="popover-Harry_Griffiths" class="player-popover">
-            <div class="close-btn" data-name="Harry_Griffiths" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Harry Griffiths</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-David_Suggett" class="player-popover">
-            <div class="close-btn" data-name="David_Suggett" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>David Suggett</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Ben_Goodenough" class="player-popover">
-            <div class="close-btn" data-name="Ben_Goodenough" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Ben Goodenough</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>7</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>7</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Steve_Rapley" class="player-popover">
-            <div class="close-btn" data-name="Steve_Rapley" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Steve Rapley</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>4</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>7</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>4</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>💪 **Conquered the Beast**: Steve Rapley tamed the hardest hole (SI 1) with a 4</li></ul>
-    </div>
-    
-
-            <div id="popover-William_Foley" class="player-popover">
-            <div class="close-btn" data-name="William_Foley" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>William Foley</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>6</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Cian_Dunne" class="player-popover">
-            <div class="close-btn" data-name="Cian_Dunne" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Cian Dunne</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Keith_Dunne" class="player-popover">
-            <div class="close-btn" data-name="Keith_Dunne" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Keith Dunne</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>6</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Stephen_Smith" class="player-popover">
-            <div class="close-btn" data-name="Stephen_Smith" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Stephen Smith</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>4</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>4</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Gareth_Sparrowhawk" class="player-popover">
-            <div class="close-btn" data-name="Gareth_Sparrowhawk" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Gareth Sparrowhawk</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Ian_Wynn" class="player-popover">
-            <div class="close-btn" data-name="Ian_Wynn" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Ian Wynn</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>7</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>8</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Philip_Stevenson" class="player-popover">
-            <div class="close-btn" data-name="Philip_Stevenson" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Philip Stevenson</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>8</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>7</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>7</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Olly_Talbot" class="player-popover">
-            <div class="close-btn" data-name="Olly_Talbot" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Olly Talbot</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Wayne_Talbot" class="player-popover">
-            <div class="close-btn" data-name="Wayne_Talbot" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Wayne Talbot</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>2</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>4</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Nicholas_Parkinson" class="player-popover">
-            <div class="close-btn" data-name="Nicholas_Parkinson" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Nicholas Parkinson</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>8</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>6</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Oscar_Eltham" class="player-popover">
-            <div class="close-btn" data-name="Oscar_Eltham" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Oscar Eltham</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>8</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>7</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Mike_Mullins" class="player-popover">
-            <div class="close-btn" data-name="Mike_Mullins" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Mike Mullins</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>7</td></tr><tr><td>H5</td><td>7</td></tr><tr><td>H6</td><td>3</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Don_Law" class="player-popover">
-            <div class="close-btn" data-name="Don_Law" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Don Law</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-David_JM_Bolton" class="player-popover">
-            <div class="close-btn" data-name="David_JM_Bolton" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>David JM Bolton</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>4</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
-            <div id="popover-Ben_Costello" class="player-popover">
-            <div class="close-btn" data-name="Ben_Costello" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Ben Costello</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H2</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>🔒 **Locked-In Early**: Ben Costello opened with 5 on holes 1-3</li></ul>
-    </div>
-    
-
-            <div id="popover-Doug_Costello" class="player-popover">
-            <div class="close-btn" data-name="Doug_Costello" onclick="hidePopoverByElement(this)">&times;</div>
-            <h3>Doug Costello</h3>
-            <strong>Hole-by-hole:</strong>
-            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H7</td><td>2</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
-            <strong>Awards:</strong>
-            <ul><li>None</li></ul>
-    </div>
-    
-
+    if (document.getElementById("holeChart")) {
+      new Chart(document.getElementById("holeChart"), {
+        type: 'line',
+        data: {
+          labels: holeAverages.map(e => e.hole),
+          datasets: [{
+            label: 'Avg Stableford',
+            data: holeAverages.map(e => e.avg),
+            fill: false,
+            borderColor: '#66bb6a',
+            tension: 0.2
+          }]
+        },
+        options: { responsive: true }
+      });
+    }
+  });
+</script>
 </body>
 </html>
+
