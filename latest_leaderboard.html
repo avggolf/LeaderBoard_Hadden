@@ -6,120 +6,32 @@
   <title>🏌️‍♂️ Tournament of Champions — Last Update:  Sunday 27 April 2025</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body {
-      background-color: #ffffff;
-      color: #000000;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 100%;
-      padding: 1rem;
-      box-sizing: border-box;
-    }
-    h1, h2, h3 {
-      color: #000;
-    }
-    .card {
-      background-color: #f9f9f9;
-      border-radius: 12px;
-      padding: 1rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      overflow-x: auto;
-    }
-    .winner {
-      background-color: #e0e0e0;
-      font-weight: bold;
-    }
-    table {
-      width: 100%;
-      table-layout: auto;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    th, td {
-      padding: 0.6rem;
-      border: 1px solid #ccc;
-      text-align: center;
-      white-space: nowrap;
-      word-wrap: break-word;
-    }
-    th:nth-child(3), td:nth-child(3) { /* HCP column */
-      min-width: 40px;
-    }
-    .tooltip[data-tip]:hover::after {
-      content: attr(data-tip);
-      position: absolute;
-      background: #000;
-      color: #fff;
-      padding: 5px;
-      border-radius: 5px;
-      font-size: 0.8rem;
-      white-space: nowrap;
-    }
-    .chart-container {
-      width: 100%;
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-    .player-popover {
-      display: none;
-      background-color: #fff;
-      padding: 1rem;
-      border: 1px solid #aaa;
-      border-radius: 10px;
-      position: fixed;
-      z-index: 999;
-      color: #000;
-      width: 90vw;
-      max-height: 80vh;
-      overflow-y: auto;
-      top: 10vh;
-      left: 5vw;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    }
-    .player-popover .close-btn {
-      text-align: right;
-      font-size: 1.5rem;
-      cursor: pointer;
-      margin-bottom: 1rem;
-      color: #cc0000;
-      font-weight: bold;
-    }
-    .player-popover table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-    }
-    .player-popover th, .player-popover td {
-      padding: 0.4rem;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
+    body { background-color: #ffffff; color: #000000; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    .container { max-width: 100%; padding: 1rem; box-sizing: border-box; }
+    h1, h2, h3 { color: #000; }
+    .card { background-color: #f9f9f9; border-radius: 12px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 0 5px rgba(0,0,0,0.1); overflow-x: auto; }
+    .winner { background-color: #e0e0e0; font-weight: bold; }
+    table { width: 100%; table-layout: auto; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.6rem; border: 1px solid #ccc; text-align: center; white-space: nowrap; word-wrap: break-word; }
+    th:nth-child(3), td:nth-child(3) { min-width: 40px; }
+    .tooltip[data-tip]:hover::after { content: attr(data-tip); position: absolute; background: #000; color: #fff; padding: 5px; border-radius: 5px; font-size: 0.8rem; white-space: nowrap; }
+    .chart-container { width: 100%; max-width: 600px; margin: 2rem auto; }
+    .player-popover { display: none; background-color: #fff; padding: 1rem; border: 1px solid #aaa; border-radius: 10px; position: fixed; z-index: 999; color: #000; width: 90vw; max-height: 80vh; overflow-y: auto; top: 10vh; left: 5vw; box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+    .player-popover .close-btn { text-align: right; font-size: 1.5rem; cursor: pointer; margin-bottom: 1rem; color: #cc0000; font-weight: bold; }
+    .player-popover table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    .player-popover th, .player-popover td { padding: 0.4rem; border: 1px solid #ccc; text-align: center; }
     @media (max-width: 600px) {
-      body {
-        font-size: 8px;
-      }
-      h1, h2, h3 {
-        font-size: 1.2rem;
-      }
-      th, td {
-        font-size: 0.8rem;
-        padding: 0.4rem;
-      }
-      .player-popover {
-        width: 95vw !important;
-        left: 2.5vw !important;
-        font-size: 0.9rem;
-      }
+      body { font-size: 8px; }
+      h1, h2, h3 { font-size: 1.2rem; }
+      th, td { font-size: 0.8rem; padding: 0.4rem; }
+      .player-popover { width: 95vw !important; left: 2.5vw !important; font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
 <div class="container">
   <h1>🏌️‍♂️ Tournament of Champions — Last Update:  Sunday 27 April 2025</h1>
+
   <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
     <div class="chart-container">
       <h3>Score Distribution</h3>
@@ -136,12 +48,106 @@
       <div class="card">
         <h2>🏅 Overall Leaderboard</h2>
         <table>
-        <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
--       <tbody></tbody>
-+       <tbody>[TABLE_PRIMARY]</tbody>
-      </table>
-    </div>
-
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
+          <tbody>[TABLE_PRIMARY]</tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🏅 Gross Leaderboard</h2>
+        <table>
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead>
+          <tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Aaron Tame')">Aaron Tame 🥇</span></td><td>7.0</td><td>67</td><td>None</td></tr>
+<tr class='winner'><td>2</td><td><span class='player-link' onclick="showPlayer('Mick Woodall')">Mick Woodall 🥈</span></td><td>5.0</td><td>72</td><td>None</td></tr>
+<tr class='winner'><td>3</td><td><span class='player-link' onclick="showPlayer('Martin Whitaker')">Martin Whitaker 🥉</span></td><td>5.0</td><td>72</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>4</td><td><span class='player-link' onclick="showPlayer('David Beaven')">David Beaven</span></td><td>10.0</td><td>67</td><td>None</td></tr>
+<tr class=''><td>5</td><td><span class='player-link' onclick="showPlayer('Lee Fuller')">Lee Fuller</span></td><td>4.0</td><td>74</td><td>None</td></tr>
+<tr class=''><td>6</td><td><span class='player-link' onclick="showPlayer('David JM Bolton')">David JM Bolton</span></td><td>8.0</td><td>71</td><td>None</td></tr>
+<tr class=''><td>7</td><td><span class='player-link' onclick="showPlayer('Martin Orme')">Martin Orme</span></td><td>11.0</td><td>68</td><td>None</td></tr>
+<tr class=''><td>8</td><td><span class='player-link' onclick="showPlayer('Rob Hayden')">Rob Hayden</span></td><td>9.0</td><td>70</td><td>None</td></tr>
+<tr class=''><td>9</td><td><span class='player-link' onclick="showPlayer('Kaz Meslohi')">Kaz Meslohi</span></td><td>7.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>10</td><td><span class='player-link' onclick="showPlayer('Darren Fuller')">Darren Fuller</span></td><td>9.0</td><td>72</td><td>None</td></tr>
+<tr class=''><td>11</td><td><span class='player-link' onclick="showPlayer('Peter Cosford')">Peter Cosford</span></td><td>9.0</td><td>72</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 8 😬 We’ve all been there…"><td>12</td><td><span class='player-link' onclick="showPlayer('Wayne Talbot')">Wayne Talbot</span></td><td>8.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>13</td><td><span class='player-link' onclick="showPlayer('Joe Cheong')">Joe Cheong</span></td><td>7.0</td><td>75</td><td>None</td></tr>
+<tr class=''><td>14</td><td><span class='player-link' onclick="showPlayer('Joe Butler')">Joe Butler</span></td><td>9.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>15</td><td><span class='player-link' onclick="showPlayer('Darren Cadman')">Darren Cadman</span></td><td>11.0</td><td>72</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>16</td><td><span class='player-link' onclick="showPlayer('Peter Wilkinson')">Peter Wilkinson</span></td><td>9.0</td><td>75</td><td>None</td></tr>
+<tr class=''><td>17</td><td><span class='player-link' onclick="showPlayer('Mark Roberts')">Mark Roberts</span></td><td>14.0</td><td>70</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>18</td><td><span class='player-link' onclick="showPlayer('Barry Carter')">Barry Carter</span></td><td>6.0</td><td>79</td><td>None</td></tr>
+<tr class=''><td>19</td><td><span class='player-link' onclick="showPlayer('Aidan Eltham')">Aidan Eltham</span></td><td>7.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>20</td><td><span class='player-link' onclick="showPlayer('John Wells')">John Wells</span></td><td>12.0</td><td>74</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 8 😬 We’ve all been there…"><td>21</td><td><span class='player-link' onclick="showPlayer('Steve Rapley')">Steve Rapley</span></td><td>10.0</td><td>78</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>22</td><td><span class='player-link' onclick="showPlayer('Simon Griffiths')">Simon Griffiths</span></td><td>18.0</td><td>70</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>23</td><td><span class='player-link' onclick="showPlayer('Gary Bumpass')">Gary Bumpass</span></td><td>12.0</td><td>77</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>24</td><td><span class='player-link' onclick="showPlayer('Tim Brown')">Tim Brown</span></td><td>16.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>25</td><td><span class='player-link' onclick="showPlayer('Paul Chalk')">Paul Chalk</span></td><td>22.0</td><td>67</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 8 😬 We’ve all been there…"><td>26</td><td><span class='player-link' onclick="showPlayer('Harry Griffiths')">Harry Griffiths</span></td><td>8.0</td><td>82</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>27</td><td><span class='player-link' onclick="showPlayer('David Greenfield')">David Greenfield</span></td><td>18.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>28</td><td><span class='player-link' onclick="showPlayer('Kieran Cooper')">Kieran Cooper</span></td><td>18.0</td><td>74</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 11: 7 🫣 Might need a drink after that one"><td>29</td><td><span class='player-link' onclick="showPlayer('Vincent Cooper')">Vincent Cooper</span></td><td>19.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>30</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne</span></td><td>11.0</td><td>82</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>31</td><td><span class='player-link' onclick="showPlayer('Glyn Jones')">Glyn Jones</span></td><td>15.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>32</td><td><span class='player-link' onclick="showPlayer('Nick Kilbee')">Nick Kilbee</span></td><td>21.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 11: 7 🫣 Might need a drink after that one"><td>33</td><td><span class='player-link' onclick="showPlayer('Don Law')">Don Law</span></td><td>16.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 9 😬 We’ve all been there…"><td>34</td><td><span class='player-link' onclick="showPlayer('Mark Hodson')">Mark Hodson</span></td><td>21.0</td><td>74</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>35</td><td><span class='player-link' onclick="showPlayer('Jason Taylor')">Jason Taylor</span></td><td>22.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>36</td><td><span class='player-link' onclick="showPlayer('Gareth Sparrowhawk')">Gareth Sparrowhawk</span></td><td>18.0</td><td>77</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 10+ 😰 Hope your wedge survived!"><td>37</td><td><span class='player-link' onclick="showPlayer('Craig Fisher')">Craig Fisher</span></td><td>17.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>38</td><td><span class='player-link' onclick="showPlayer('Gary Walker')">Gary Walker</span></td><td>15.0</td><td>82</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 5: 7 🫣 Might need a drink after that one"><td>39</td><td><span class='player-link' onclick="showPlayer('Keith Dunne')">Keith Dunne</span></td><td>19.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>40</td><td><span class='player-link' onclick="showPlayer('Alex Stacey')">Alex Stacey</span></td><td>23.0</td><td>76</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 9 😬 We’ve all been there…"><td>41</td><td><span class='player-link' onclick="showPlayer('Steve Sinnott')">Steve Sinnott</span></td><td>17.0</td><td>89</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>42</td><td><span class='player-link' onclick="showPlayer('Glyn Hall')">Glyn Hall</span></td><td>23.0</td><td>84</td><td>None</td></tr></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🏅 Nett Leaderboard</h2>
+        <table>
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
+          <tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Aaron Tame')">Aaron Tame 🥇</span></td><td>7.0</td><td>67</td><td>None</td></tr>
+<tr class='winner' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('David Beaven')">David Beaven 🥈</span></td><td>10.0</td><td>67</td><td>None</td></tr>
+<tr class='winner' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Paul Chalk')">Paul Chalk 🥉</span></td><td>22.0</td><td>67</td><td>None</td></tr>
+<tr class=''><td>4</td><td><span class='player-link' onclick="showPlayer('Martin Orme')">Martin Orme</span></td><td>11.0</td><td>68</td><td>None</td></tr>
+<tr class=''><td>5</td><td><span class='player-link' onclick="showPlayer('Mark Roberts')">Mark Roberts</span></td><td>14.0</td><td>70</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>6</td><td><span class='player-link' onclick="showPlayer('Simon Griffiths')">Simon Griffiths</span></td><td>18.0</td><td>70</td><td>None</td></tr>
+<tr class=''><td>7</td><td><span class='player-link' onclick="showPlayer('Rob Hayden')">Rob Hayden</span></td><td>9.0</td><td>70</td><td>None</td></tr>
+<tr class=''><td>8</td><td><span class='player-link' onclick="showPlayer('David JM Bolton')">David JM Bolton</span></td><td>8.0</td><td>71</td><td>None</td></tr>
+<tr class=''><td>9</td><td><span class='player-link' onclick="showPlayer('Mick Woodall')">Mick Woodall</span></td><td>5.0</td><td>72</td><td>None</td></tr>
+<tr class=''><td>10</td><td><span class='player-link' onclick="showPlayer('Martin Whitaker')">Martin Whitaker</span></td><td>5.0</td><td>72</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>11</td><td><span class='player-link' onclick="showPlayer('Darren Fuller')">Darren Fuller</span></td><td>9.0</td><td>72</td><td>None</td></tr>
+<tr class=''><td>12</td><td><span class='player-link' onclick="showPlayer('Peter Cosford')">Peter Cosford</span></td><td>9.0</td><td>72</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>13</td><td><span class='player-link' onclick="showPlayer('Darren Cadman')">Darren Cadman</span></td><td>11.0</td><td>72</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>14</td><td><span class='player-link' onclick="showPlayer('David Greenfield')">David Greenfield</span></td><td>18.0</td><td>73</td><td>None</td></tr>
+<tr class=''><td>15</td><td><span class='player-link' onclick="showPlayer('Kaz Meslohi')">Kaz Meslohi</span></td><td>7.0</td><td>73</td><td>None</td></tr>
+<tr class=''><td>16</td><td><span class='player-link' onclick="showPlayer('Joe Butler')">Joe Butler</span></td><td>9.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 8 😬 We’ve all been there…"><td>17</td><td><span class='player-link' onclick="showPlayer('Wayne Talbot')">Wayne Talbot</span></td><td>8.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>18</td><td><span class='player-link' onclick="showPlayer('Tim Brown')">Tim Brown</span></td><td>16.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 11: 7 🫣 Might need a drink after that one"><td>19</td><td><span class='player-link' onclick="showPlayer('Vincent Cooper')">Vincent Cooper</span></td><td>19.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>20</td><td><span class='player-link' onclick="showPlayer('Nick Kilbee')">Nick Kilbee</span></td><td>21.0</td><td>73</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>21</td><td><span class='player-link' onclick="showPlayer('Jason Taylor')">Jason Taylor</span></td><td>22.0</td><td>73</td><td>None</td></tr>
+<tr class=''><td>22</td><td><span class='player-link' onclick="showPlayer('Lee Fuller')">Lee Fuller</span></td><td>4.0</td><td>74</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>23</td><td><span class='player-link' onclick="showPlayer('John Wells')">John Wells</span></td><td>12.0</td><td>74</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>24</td><td><span class='player-link' onclick="showPlayer('Kieran Cooper')">Kieran Cooper</span></td><td>18.0</td><td>74</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 9 😬 We’ve all been there…"><td>25</td><td><span class='player-link' onclick="showPlayer('Mark Hodson')">Mark Hodson</span></td><td>21.0</td><td>74</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>26</td><td><span class='player-link' onclick="showPlayer('Joe Cheong')">Joe Cheong</span></td><td>7.0</td><td>75</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 12: 7 🫣 Might need a drink after that one"><td>27</td><td><span class='player-link' onclick="showPlayer('Peter Wilkinson')">Peter Wilkinson</span></td><td>9.0</td><td>75</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>28</td><td><span class='player-link' onclick="showPlayer('Alex Stacey')">Alex Stacey</span></td><td>23.0</td><td>76</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>29</td><td><span class='player-link' onclick="showPlayer('Gary Bumpass')">Gary Bumpass</span></td><td>12.0</td><td>77</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>30</td><td><span class='player-link' onclick="showPlayer('Gareth Sparrowhawk')">Gareth Sparrowhawk</span></td><td>18.0</td><td>77</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 8 😬 We’ve all been there…"><td>31</td><td><span class='player-link' onclick="showPlayer('Steve Rapley')">Steve Rapley</span></td><td>10.0</td><td>78</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>32</td><td><span class='player-link' onclick="showPlayer('Barry Carter')">Barry Carter</span></td><td>6.0</td><td>79</td><td>None</td></tr>
+<tr class=''><td>33</td><td><span class='player-link' onclick="showPlayer('Aidan Eltham')">Aidan Eltham</span></td><td>7.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>34</td><td><span class='player-link' onclick="showPlayer('Glyn Jones')">Glyn Jones</span></td><td>15.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 18: 10+ 😰 Hope your wedge survived!"><td>35</td><td><span class='player-link' onclick="showPlayer('Craig Fisher')">Craig Fisher</span></td><td>17.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 11: 7 🫣 Might need a drink after that one"><td>36</td><td><span class='player-link' onclick="showPlayer('Don Law')">Don Law</span></td><td>16.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 5: 7 🫣 Might need a drink after that one"><td>37</td><td><span class='player-link' onclick="showPlayer('Keith Dunne')">Keith Dunne</span></td><td>19.0</td><td>79</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 3: 8 😬 We’ve all been there…"><td>38</td><td><span class='player-link' onclick="showPlayer('Harry Griffiths')">Harry Griffiths</span></td><td>8.0</td><td>82</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>39</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne</span></td><td>11.0</td><td>82</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 2: 7 🫣 Might need a drink after that one"><td>40</td><td><span class='player-link' onclick="showPlayer('Gary Walker')">Gary Walker</span></td><td>15.0</td><td>82</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>41</td><td><span class='player-link' onclick="showPlayer('Glyn Hall')">Glyn Hall</span></td><td>23.0</td><td>84</td><td>None</td></tr>
+<tr class='' class="tooltip" data-tip="Hole 1: 9 😬 We’ve all been there…"><td>42</td><td><span class='player-link' onclick="showPlayer('Steve Sinnott')">Steve Sinnott</span></td><td>17.0</td><td>89</td><td>None</td></tr></tbody>
+        </table>
+      </div>
       <div class="card">
         <h2>🏅 Div 1 (hcp 1–12)</h2>
         <table>
@@ -157,6 +163,7 @@
         </table>
       </div>
     </div>
+
     <div style="flex: 1 1 600px; max-width: 500px;">
       <div class="card">
         <h2>🏆 Winner's Circle</h2>
@@ -195,9 +202,9 @@
 <li>🥴 **Mr. Inconsistent**: Craig Fisher ranged 6 shots between best & worst hole</li>
 <li>🛠 **The Grinder**: Barry Carter made 6 pars without a single birdie</li>
 <li>🧨 **Bomb Hole Bandit**: Mick Woodall mastered the bomb holes (11 & 12) with 7</li>
-<li>📞 **On Hold Champion**: Lee Fuller kept cool on 9 and still scored 3</li>
-<li>🚫 **Safety First**: Nick Kilbee played it smart on 2 & 8 with no trouble</li>
-<li>🪦 **OB Survivor**: Aaron Tame kept it clean on OB holes: 1, 3, 12, 13</li>
+<li>📞 **On Hold Champion**: Darren Cadman kept cool on 9 and still scored 3</li>
+<li>🚫 **Safety First**: Rob Hayden played it smart on 2 & 8 with no trouble</li>
+<li>🪦 **OB Survivor**: Mark Hodson kept it clean on OB holes: 2</li>
 <li>😤 **Sixteen Slayer**: David Greenfield conquered the toughest hole with a 4</li></ul>
       </div>
       <div class="card">
@@ -206,6 +213,7 @@
       </div>
     </div>
   </div>
+
   <!-- 👤 Player popups rendered here -->
   
             <div id="popover-David_Greenfield" class="player-popover">
@@ -254,7 +262,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>4</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>3</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>3</td></tr><tr><td>H12</td><td>4</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🐦 **Birdie Barrage**: Aaron Tame with 5 birdies</li><li>🟰 **Par Machine**: Aaron Tame with 12 pars</li><li>💪 **Conquered the Beast**: Aaron Tame tamed the hardest hole (SI 1) with a 4</li><li>🔒 **Locked-In Early**: Aaron Tame opened with 13 on holes 1-3</li><li>🪦 **OB Survivor**: Aaron Tame kept it clean on OB holes: 1, 3, 12, 13</li></ul>
+            <ul><li>🐦 **Birdie Barrage**: Aaron Tame with 5 birdies</li><li>🟰 **Par Machine**: Aaron Tame with 12 pars</li><li>💪 **Conquered the Beast**: Aaron Tame tamed the hardest hole (SI 1) with a 4</li><li>🔒 **Locked-In Early**: Aaron Tame opened with 13 on holes 1-3</li></ul>
     </div>
     
 
@@ -384,7 +392,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>3</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>📞 **On Hold Champion**: Lee Fuller kept cool on 9 and still scored 3</li></ul>
+            <ul><li>None</li></ul>
     </div>
     
 
@@ -414,7 +422,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>None</li></ul>
+            <ul><li>📞 **On Hold Champion**: Darren Cadman kept cool on 9 and still scored 3</li></ul>
     </div>
     
 
@@ -544,7 +552,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>3</td></tr><tr><td>H3</td><td>9</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>4</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>None</li></ul>
+            <ul><li>🪦 **OB Survivor**: Mark Hodson kept it clean on OB holes: 2</li></ul>
     </div>
     
 
@@ -564,7 +572,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>6</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>4</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>7</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>7</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🚫 **Safety First**: Nick Kilbee played it smart on 2 & 8 with no trouble</li></ul>
+            <ul><li>None</li></ul>
     </div>
     
 
@@ -604,7 +612,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>3</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>4</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>4</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>None</li></ul>
+            <ul><li>🚫 **Safety First**: Rob Hayden played it smart on 2 & 8 with no trouble</li></ul>
     </div>
     
 
@@ -628,6 +636,7 @@
     </div>
     
 </div>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const scoreData = [];
@@ -638,16 +647,9 @@
         type: 'bar',
         data: {
           labels: scoreData.map(e => e.label),
-          datasets: [{
-            label: 'Players',
-            data: scoreData.map(e => e.count),
-            backgroundColor: '#42a5f5'
-          }]
+          datasets: [{ label: 'Players', data: scoreData.map(e => e.count) }]
         },
-        options: {
-          responsive: true,
-          plugins: { legend: { display: false } }
-        }
+        options: { responsive: true, plugins: { legend: { display: false } } }
       });
     }
 
@@ -656,13 +658,7 @@
         type: 'line',
         data: {
           labels: holeAverages.map(e => e.hole),
-          datasets: [{
-            label: 'Avg Stableford',
-            data: holeAverages.map(e => e.avg),
-            fill: false,
-            borderColor: '#66bb6a',
-            tension: 0.2
-          }]
+          datasets: [{ label: 'Avg Stableford', data: holeAverages.map(e => e.avg), fill: false, tension: 0.2 }]
         },
         options: { responsive: true }
       });
