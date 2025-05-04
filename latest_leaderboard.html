@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🏌️‍♂️ Men's Monthly Medal & Inaugural Qualifier 2025 — Last Update:  Sunday 04 May 2025</title>
+  <title>🏌️‍♂️ All Competition Rounds for This Month</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body { background-color: #ffffff; color: #000000; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
@@ -85,7 +85,7 @@
 </head>
 <body>
 <div class="container">
-  <h1>🏌️‍♂️ Men's Monthly Medal & Inaugural Qualifier 2025 — Last Update:  Sunday 04 May 2025</h1>
+  <h1>🏌️‍♂️ All Competition Rounds for This Month</h1>
 
   <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
   
@@ -97,12 +97,12 @@
      <div style="flex: 1 1 600px; max-width: 500px;">
       <div class="card">
         <h2>📊 Stats Summary</h2>
-        <ul><li>- Avg Gross: 90.1 | Avg Nett: 75.4 | Avg Stableford: -</li>
-<li>- Total Players: 49</li>
-<li>- Most Generous Hole: Hole 10 (Avg 5.00 Stableford points)</li>
+        <ul><li>- Avg Gross: 90.1 | Avg Nett: 75.4 | Avg Stableford: 13.0</li>
+<li>- Total Players: 50</li>
+<li>- Most Generous Hole: Hole 10 (Avg 4.98 Stableford points)</li>
 <li>- Blow-Up Hole: Hole 3 (7 blobs, Avg 5.9 strokes)</li>
 <li>- Most Consistent: Mark Drake (3-shot variance)</li>
-<li>📈 Highest Score on a Hole: Kieran Cooper scored 10 on Hole 18</li>
+<li>📈 Highest Score on a Hole: Vince Prescott scored 33 on Hole 10</li>
 <li>📉 Lowest Score on a Hole: Fred Storrar scored 2 on Hole 14</li></ul>
       </div>
     </div>
@@ -140,7 +140,7 @@
 
       <h2>Top 10 Stableford Scores</h2>
       <table class="leaderboard-table">
-      <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody>
+      <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>1</td><td><span class='player-link' onclick="showPlayer('Vince Prescott')">Vince Prescott 🥇</span></td><td>6.0</td><td>None</td><td>None</td><td>13</td></tr></tbody>
       </table>
       <div class="card">
         <h2>🏅 Div 1 (hcp 1–12)</h2>
@@ -322,13 +322,23 @@
 
   <!-- 👤 Player popups rendered here -->
   
+            <div id="popover-Vince_Prescott" class="player-popover">
+            <div class="close-btn" data-name="Vince_Prescott" onclick="hidePopoverByElement(this)">&times;</div>
+            <h3>Vince Prescott</h3>
+            <strong>Hole-by-hole:</strong>
+            <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>33</td></tr></table>
+            <strong>Awards:</strong>
+            <ul><li>💩 Worst Hole of the Week: Hole 10 - Vince Prescott scored 33</li><li>🎢 **Rollercoaster Award**: Vince Prescott with a 30 point swing between holes</li><li>🦅 **Eagle Eyed**: Vince Prescott bagged an eagle on hole 1!</li><li>🥴 **Mr. Inconsistent**: Vince Prescott ranged 30 shots between best & worst hole</li></ul>
+    </div>
+    
+
             <div id="popover-Fred_Storrar" class="player-popover">
             <div class="close-btn" data-name="Fred_Storrar" onclick="hidePopoverByElement(this)">&times;</div>
             <h3>Fred Storrar</h3>
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>6</td></tr><tr><td>H11</td><td>7</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>2</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🦅 **Eagle Eyed**: Fred Storrar bagged an eagle on hole 1!</li><li>🍕 **Snack Break Needed**: Fred Storrar had 2 back-to-back 7+ scores</li></ul>
+            <ul><li>🍕 **Snack Break Needed**: Fred Storrar had 2 back-to-back 7+ scores</li></ul>
     </div>
     
 
@@ -348,7 +358,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>8</td></tr><tr><td>H6</td><td>7</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>7</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>7</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>10</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>💩 Worst Hole of the Week: Hole 18 - Kieran Cooper scored 10</li><li>🎢 **Rollercoaster Award**: Kieran Cooper with a 7 point swing between holes</li><li>🫣 **Bottled the Bunny**: Kieran Cooper blew the easiest hole (SI 18) with a 10</li><li>🥴 **Mr. Inconsistent**: Kieran Cooper ranged 7 shots between best & worst hole</li></ul>
+            <ul><li>🫣 **Bottled the Bunny**: Kieran Cooper blew the easiest hole (SI 18) with a 10</li></ul>
     </div>
     
 
@@ -438,7 +448,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>3</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>6</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>4</td></tr><tr><td>H12</td><td>4</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🧨 **Bomb Hole Bandit**: David Beaven mastered the bomb holes (11 & 12) with 8</li></ul>
+            <ul><li>None</li></ul>
     </div>
     
 
@@ -468,7 +478,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>3</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>7</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>None</li></ul>
+            <ul><li>📞 **On Hold Champion**: Steve Rapley kept cool on 9 and still scored 3</li></ul>
     </div>
     
 
@@ -548,7 +558,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>2</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🚫 **Safety First**: Cian Dunne played it smart on 2 & 8 with no trouble</li></ul>
+            <ul><li>🪦 **OB Survivor**: Cian Dunne kept it clean on OB holes: 2, 3</li></ul>
     </div>
     
 
@@ -598,7 +608,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>7</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>6</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>9</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>6</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>4</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>5</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🪦 **OB Survivor**: Marcus Bird-Newell kept it clean on OB holes: 2, 3</li></ul>
+            <ul><li>None</li></ul>
     </div>
     
 
@@ -608,7 +618,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>7</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>6</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>3</td></tr><tr><td>H9</td><td>5</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>3</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>None</li></ul>
+            <ul><li>🚫 **Safety First**: Russell Harding played it smart on 2 & 8 with no trouble</li></ul>
     </div>
     
 
@@ -628,7 +638,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>5</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>4</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>7</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>4</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>4</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🔥 **Hot Finish**: Keith Dunne finished strong with 11 on 16–18</li></ul>
+            <ul><li>None</li></ul>
     </div>
     
 
@@ -708,7 +718,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>4</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>4</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>4</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>5</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>5</td></tr><tr><td>H15</td><td>3</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>7</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>📞 **On Hold Champion**: David JM Bolton kept cool on 9 and still scored 3</li></ul>
+            <ul><li>None</li></ul>
     </div>
     
 
@@ -815,8 +825,8 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const scoreData = [];
-    const holeAverages = [{"hole": "H1", "avg": 2.37}, {"hole": "H2", "avg": 2.43}, {"hole": "H3", "avg": 1.45}, {"hole": "H4", "avg": 2.16}, {"hole": "H5", "avg": 1.73}, {"hole": "H6", "avg": 1.9}, {"hole": "H7", "avg": 2.24}, {"hole": "H8", "avg": 2.43}, {"hole": "H9", "avg": 1.78}, {"hole": "H10", "avg": 1.71}, {"hole": "H11", "avg": 1.49}, {"hole": "H12", "avg": 1.57}, {"hole": "H13", "avg": 1.14}, {"hole": "H14", "avg": 1.61}, {"hole": "H15", "avg": 1.71}, {"hole": "H16", "avg": 1.35}, {"hole": "H17", "avg": 1.59}, {"hole": "H18", "avg": 1.59}];
+    const scoreData = [{"label": "13", "count": 1}];
+    const holeAverages = [{"hole": "H1", "avg": 2.34}, {"hole": "H2", "avg": 2.42}, {"hole": "H3", "avg": 1.46}, {"hole": "H4", "avg": 2.16}, {"hole": "H5", "avg": 1.73}, {"hole": "H6", "avg": 1.92}, {"hole": "H7", "avg": 2.24}, {"hole": "H8", "avg": 2.43}, {"hole": "H9", "avg": 1.76}, {"hole": "H10", "avg": 1.68}, {"hole": "H11", "avg": 1.49}, {"hole": "H12", "avg": 1.57}, {"hole": "H13", "avg": 1.14}, {"hole": "H14", "avg": 1.61}, {"hole": "H15", "avg": 1.71}, {"hole": "H16", "avg": 1.35}, {"hole": "H17", "avg": 1.59}, {"hole": "H18", "avg": 1.59}];
 
     if (document.getElementById("scoreChart")) {
       new Chart(document.getElementById("scoreChart"), {
