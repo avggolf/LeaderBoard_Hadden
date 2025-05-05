@@ -88,25 +88,16 @@
   <h1>🏌️‍♂️ Men's Bank Holiday Stableford — Last Update:  Monday 05 May 2025</h1>
 
   <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-  
+    <div class="chart-container">
+      <h3>Score Distribution</h3>
+      <canvas id="scoreChart"></canvas>
+    </div>
     <div class="chart-container">
       <h3>Average Stableford by Hole</h3>
       <canvas id="holeChart"></canvas>
     </div>
   </div>
-     <div style="flex: 1 1 600px; max-width: 500px;">
-      <div class="card">
-        <h2>📊 Stats Summary</h2>
-        <ul><li>- Avg Gross: - | Avg Nett: - | Avg Stableford: 30.9</li>
-<li>- Total Players: 12</li>
-<li>- Most Generous Hole: Hole 10 (Avg 5.00 Stableford points)</li>
-<li>- Blow-Up Hole: Hole 18 (5 blobs, Avg 6.8 strokes)</li>
-<li>- Most Consistent: John Soanes (3-shot variance)</li>
-<li>📈 Highest Score on a Hole: Luke Settle scored 37 on Hole 8</li>
-<li>📉 Lowest Score on a Hole: Adi Junkison scored 0 on Hole 9</li></ul>
-      </div>
-    </div>
-  </div> 
+  
   <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
     <div style="flex: 2 1 600px;">
       <div class="card">
@@ -133,10 +124,31 @@
 <tr class='' class="tooltip" data-tip="Hole 10: 7 🫣 Might need a drink after that one"><td>9</td><td><span class='player-link'   onclick="showPlayer('Mark Drake')">Mark Drake</span></td><td>12.0</td><td>None</td><td>None</td><td>30</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>10</td><td><span class='player-link'   onclick="showPlayer('Kevin Brown')">Kevin Brown</span></td><td>8.0</td><td>None</td><td>None</td><td>29</td></tr></tbody>
       </table>
+
+        <h2>🏅 Overall Leaderboard</h2>
+        <table>
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
+          <tbody>[TABLE_PRIMARY]</tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🏅 Gross Leaderboard</h2>
+        <table>
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead>
+          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🏅 Nett Leaderboard</h2>
+        <table>
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
+          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></tbody>
+        </table>
+      </div>
       <div class="card">
         <h2>🏅 Div 1 (hcp 1–12)</h2>
         <table>
-
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
           <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne 🥇</span></td><td>10.0</td><td>None</td><td>None</td><td>34</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 10: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('Mark Drake')">Mark Drake 🥈</span></td><td>12.0</td><td>None</td><td>None</td><td>30</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Kevin Brown')">Kevin Brown 🥉</span></td><td>8.0</td><td>None</td><td>None</td><td>29</td></tr>
@@ -146,7 +158,7 @@
       <div class="card">
         <h2>🏅 Div 2 (hcp 13+ – The Choppers)</h2>
         <table>
-
+          <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Nett</th><th>Stableford</th></tr></thead>
           <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Stephen Smith')">Stephen Smith 🥇</span></td><td>15.0</td><td>None</td><td>None</td><td>37</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('David Worrall')">David Worrall 🥈</span></td><td>20.0</td><td>None</td><td>None</td><td>36</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Carlos Gisbert Villegas')">Carlos Gisbert Villegas 🥉</span></td><td>29.0</td><td>None</td><td>None</td><td>33</td></tr>
@@ -159,24 +171,65 @@
       </div>
     </div>
 
+    <div style="flex: 1 1 600px; max-width: 500px;">
+      <div class="card">
+        <h2>🏆 Winner's Circle</h2>
+        <ul><li>🏆 **Overall Top 3**</li>
+<li>- Stephen Smith (37 pts)</li>
+<li>- David Worrall (36 pts)</li>
+<li>- Cian Dunne (34 pts)</li>
+<li>🏆 **Div 1 Top 3**</li>
+<li>- Cian Dunne (34 pts)</li>
+<li>- Mark Drake (30 pts)</li>
+<li>- Kevin Brown (29 pts)</li>
+<li>🏆 **Div 2 Top 3**</li>
+<li>- Stephen Smith (37 pts)</li>
+<li>- David Worrall (36 pts)</li>
+<li>- Carlos Gisbert Villegas (33 pts)</li></ul>
       </div>
       <div class="card">
-        <h2>🏅 Gross Leaderboard</h2>
-        <table>
-
-          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></tbody>
-        </table>
+        <h2>📊 Stats Summary</h2>
+        <ul><li>- Avg Gross: - | Avg Nett: - | Avg Stableford: 30.9</li>
+<li>- Total Players: 12</li>
+<li>- Most Generous Hole: Hole 10 (Avg 5.00 Stableford points)</li>
+<li>- Blow-Up Hole: Hole 18 (5 blobs, Avg 6.8 strokes)</li>
+<li>- Most Consistent: John Soanes (3-shot variance)</li>
+<li>📈 Highest Score on a Hole: Luke Settle scored 37 on Hole 8</li>
+<li>📉 Lowest Score on a Hole: Adi Junkison scored 0 on Hole 9</li></ul>
       </div>
       <div class="card">
-        <h2>🏅 Nett Leaderboard</h2>
-        <table>
-
-          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></tbody>
-        </table>
+        <h2>🌼 Special Mentions</h2>
+        <ul><li>💩 Worst Hole of the Week: Hole 8 - Luke Settle scored 37</li>
+<li>🌟 Best Hole of the Week: Hole 7 - 3 scored 3</li>
+<li>🐦 **Birdie Barrage**: Carlos Gisbert Villegas with 2 birdies</li>
+<li>🟰 **Par Machine**: Cian Dunne with 8 pars</li>
+<li>👹 **Bogey Monster**: David Worrall with a streak of 4 bogeys</li>
+<li>🔁 **Mr. Consistent**: Kevin Brown with 3 consecutive pars</li>
+<li>🎢 **Rollercoaster Award**: Marcus Bird-Newell with a 6 point swing between holes</li>
+<li>💣 **Blobmeister**: David Stas with 2 blobs (8+, 0s, or NRs)</li>
+<li>🦅 **Eagle Eyed**: Mark Drake bagged an eagle on hole 1!</li>
+<li>💪 **Conquered the Beast**: Kevin Brown tamed the hardest hole (SI 1) with a 4</li>
+<li>🫣 **Bottled the Bunny**: Marcus Bird-Newell blew the easiest hole (SI 18) with a 9</li>
+<li>🧱 **Brick Wall**: Stephen Smith went 18 holes without a blow-up</li>
+<li>📉 **Implosion**: John Soanes crumbled on the back 9 (15 shots worse!)</li>
+<li>🔒 **Locked-In Early**: John Soanes opened with 5 on holes 1-3</li>
+<li>🔥 **Hot Finish**: Stephen Smith finished strong with 13 on 16–18</li>
+<li>🐌 **Slow Burner**: Kamil Sieczka took 22 to get going on holes 1–3</li>
+<li>🍕 **Snack Break Needed**: Kamil Sieczka had 3 back-to-back 7+ scores</li>
+<li>🥴 **Mr. Inconsistent**: Marcus Bird-Newell ranged 6 shots between best & worst hole</li>
+<li>🛠 **The Grinder**: Mark Drake made 7 pars without a single birdie</li>
+<li>🧨 **Bomb Hole Bandit**: John Soanes mastered the bomb holes (11 & 12) with 6</li>
+<li>📞 **On Hold Champion**: Stephen Smith kept cool on 9 and still scored 3</li>
+<li>🚫 **Safety First**: Kevin Brown played it smart on 2 & 8 with no trouble</li>
+<li>🪦 **OB Survivor**: Kevin Brown kept it clean on OB holes: 1, 2</li>
+<li>😤 **Sixteen Slayer**: Mark Drake conquered the toughest hole with a 4</li></ul>
       </div>
-
-
-
+      <div class="card">
+        <h2>🍔 Fat Mates</h2>
+        <ul><li>No fat mates this week.</li></ul>
+      </div>
+    </div>
+  </div>
 
   <!-- 👤 Player popups rendered here -->
   
@@ -276,7 +329,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>8</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>5</td></tr><tr><td>H16</td><td>6</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>6</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>👹 **Bogey Monster**: David Worrall with a streak of 4 bogeys</li><li>📞 **On Hold Champion**: David Worrall kept cool on 9 and still scored 3</li></ul>
+            <ul><li>👹 **Bogey Monster**: David Worrall with a streak of 4 bogeys</li></ul>
     </div>
     
 
@@ -306,7 +359,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>6</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>5</td></tr><tr><td>H11</td><td>5</td></tr><tr><td>H12</td><td>6</td></tr><tr><td>H13</td><td>5</td></tr><tr><td>H14</td><td>4</td></tr><tr><td>H15</td><td>6</td></tr><tr><td>H16</td><td>5</td></tr><tr><td>H17</td><td>3</td></tr><tr><td>H18</td><td>5</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>🧱 **Brick Wall**: Stephen Smith went 18 holes without a blow-up</li><li>🔥 **Hot Finish**: Stephen Smith finished strong with 13 on 16–18</li></ul>
+            <ul><li>🧱 **Brick Wall**: Stephen Smith went 18 holes without a blow-up</li><li>🔥 **Hot Finish**: Stephen Smith finished strong with 13 on 16–18</li><li>📞 **On Hold Champion**: Stephen Smith kept cool on 9 and still scored 3</li></ul>
     </div>
     
 
