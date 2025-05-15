@@ -97,12 +97,12 @@
      <div style="flex: 1 1 600px; max-width: 500px;">
       <div class="card">
         <h2>📊 Stats Summary</h2>
-        <ul><li>- Avg Gross: - | Avg Nett: - | Avg Stableford: 32.6</li>
+        <ul><li>- Avg Gross: - | Avg Nett: - | Avg Stableford: 31.7</li>
 <li>- Total Players: 9</li>
 <li>- Most Generous Hole: Hole 10 (Avg 5.00 Stableford points)</li>
 <li>- Blow-Up Hole: Hole 1 (1 blobs, Avg 6.0 strokes)</li>
 <li>- Most Consistent: Alex Stacey (2-shot variance)</li>
-<li>📈 Highest Score on a Hole: Anthony O'Donovan scored 34 on Hole 18</li>
+<li>📈 Highest Score on a Hole: Simon Collins scored 8 on Hole 1</li>
 <li>📉 Lowest Score on a Hole: Stuart Dobbs scored 3 on Hole 7</li></ul>
       </div>
     </div>
@@ -122,8 +122,8 @@
 
       <h2>Top 10 Stableford Scores</h2>
       <table class="leaderboard-table">
-      <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 13: 7 🫣 Might need a drink after that one"><td>1</td><td><span class='player-link' onclick="showPlayer('Anthony O'Donovan')">Anthony O'Donovan 🥇</span></td><td>20.0</td><td>None</td><td>None</td><td>43</td></tr>
-<tr class='winner'><td>2</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne 🥈</span></td><td>11.0</td><td>None</td><td>None</td><td>40</td></tr>
+      <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner'><td>1</td><td><span class='player-link' onclick="showPlayer('Cian Dunne')">Cian Dunne 🥇</span></td><td>11.0</td><td>None</td><td>None</td><td>40</td></tr>
+<tr class='winner' class="tooltip" data-tip="Hole 13: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('Anthony O'Donovan')">Anthony O'Donovan 🥈</span></td><td>20.0</td><td>None</td><td>None</td><td>35</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Curtis Emery')">Curtis Emery 🥉</span></td><td>19.0</td><td>None</td><td>None</td><td>34</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>4</td><td><span class='player-link'   onclick="showPlayer('Stuart Dobbs')">Stuart Dobbs</span></td><td>21.0</td><td>None</td><td>None</td><td>32</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 11: 7 🫣 Might need a drink after that one"><td>5</td><td><span class='player-link'   onclick="showPlayer('Jack Cox-Rogers')">Jack Cox-Rogers</span></td><td>24.0</td><td>None</td><td>None</td><td>31</td></tr>
@@ -144,7 +144,7 @@
         <h2>🏅 Div 2 (hcp 13+ – The Choppers)</h2>
         <table>
 
-          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 13: 7 🫣 Might need a drink after that one"><td>1</td><td><span class='player-link' onclick="showPlayer('Anthony O'Donovan')">Anthony O'Donovan 🥇</span></td><td>20.0</td><td>None</td><td>None</td><td>43</td></tr>
+          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 13: 7 🫣 Might need a drink after that one"><td>1</td><td><span class='player-link' onclick="showPlayer('Anthony O'Donovan')">Anthony O'Donovan 🥇</span></td><td>20.0</td><td>None</td><td>None</td><td>35</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 18: 7 🫣 Might need a drink after that one"><td>2</td><td><span class='player-link' onclick="showPlayer('Curtis Emery')">Curtis Emery 🥈</span></td><td>19.0</td><td>None</td><td>None</td><td>34</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Stuart Dobbs')">Stuart Dobbs 🥉</span></td><td>21.0</td><td>None</td><td>None</td><td>32</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 11: 7 🫣 Might need a drink after that one"><td>4</td><td><span class='player-link'   onclick="showPlayer('Jack Cox-Rogers')">Jack Cox-Rogers</span></td><td>24.0</td><td>None</td><td>None</td><td>31</td></tr>
@@ -180,8 +180,8 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const scoreData = [7, 6, 6, 4, 5, 5, 3, 4, 3, 6, 7, 5, 5, 6, 5, 5, 5, 6, 5, 6, 4, 6, 4, 5, 6, 5, 5, 7, 6, 4, 7, 5, 7, 4, 5, 4, 7, 3, 3, 4, 4, 6, 6, 6, 3, 4, 4, 3, 4, 8, 5, 6, 5, 5, 5, 6, 5, 4, 5, 5, 6, 6, 7, 6, 7, 4, 5, 6, 5, 5, 5, 5, 5, 4, 3, 5, 5, 6, 6, 5, 5, 5, 6, 4, 7, 5, 4, 4, 4, 4, 5, 3, 4, 4, 5, 4, 6, 4, 3, 5, 5, 4, 5, 6, 5, 6, 5, 5, 6, 5, 4, 4, 6, 7, 8, 6, 4, 8, 6, 4, 5, 5, 3, 4, 5, 5, 4, 5, 4, 5, 5, 7, 3, 6, 4, 4, 34, 6, 5, 6, 6, 6, 5, 6, 5, 4, 6, 5, 6, 6, 4, 6, 6, 5, 6];
-    const holeAverages = [{"hole": "H1", "avg": 6.0}, {"hole": "H2", "avg": 5.0}, {"hole": "H3", "avg": 5.25}, {"hole": "H4", "avg": 4.89}, {"hole": "H5", "avg": 4.89}, {"hole": "H6", "avg": 5.44}, {"hole": "H7", "avg": 4.22}, {"hole": "H8", "avg": 4.33}, {"hole": "H9", "avg": 4.0}, {"hole": "H10", "avg": 5.14}, {"hole": "H11", "avg": 5.5}, {"hole": "H12", "avg": 6.22}, {"hole": "H13", "avg": 5.56}, {"hole": "H14", "avg": 4.33}, {"hole": "H15", "avg": 5.88}, {"hole": "H16", "avg": 5.56}, {"hole": "H17", "avg": 4.11}, {"hole": "H18", "avg": 8.67}];
+    const scoreData = [7, 6, 6, 4, 5, 5, 3, 4, 3, 6, 7, 5, 5, 6, 5, 5, 5, 6, 5, 6, 4, 6, 4, 5, 6, 5, 5, 7, 6, 4, 7, 5, 7, 4, 5, 4, 7, 3, 3, 4, 4, 6, 6, 6, 3, 4, 4, 3, 4, 8, 5, 6, 5, 5, 5, 6, 5, 4, 5, 5, 6, 6, 7, 6, 7, 4, 5, 6, 5, 5, 5, 5, 5, 4, 3, 5, 5, 6, 6, 5, 5, 5, 6, 4, 7, 5, 4, 4, 4, 4, 5, 3, 4, 4, 5, 4, 6, 4, 3, 5, 5, 4, 5, 6, 5, 6, 5, 5, 6, 5, 4, 4, 6, 7, 8, 6, 4, 8, 6, 4, 5, 5, 3, 4, 5, 5, 4, 5, 4, 5, 5, 7, 3, 6, 4, 4, 6, 5, 6, 6, 6, 5, 6, 5, 4, 6, 5, 6, 6, 4, 6, 6, 5, 6];
+    const holeAverages = [{"hole": "H1", "avg": 6.0}, {"hole": "H2", "avg": 5.0}, {"hole": "H3", "avg": 5.25}, {"hole": "H4", "avg": 4.89}, {"hole": "H5", "avg": 4.89}, {"hole": "H6", "avg": 5.44}, {"hole": "H7", "avg": 4.22}, {"hole": "H8", "avg": 4.33}, {"hole": "H9", "avg": 4.0}, {"hole": "H10", "avg": 5.14}, {"hole": "H11", "avg": 5.5}, {"hole": "H12", "avg": 6.22}, {"hole": "H13", "avg": 5.56}, {"hole": "H14", "avg": 4.33}, {"hole": "H15", "avg": 5.88}, {"hole": "H16", "avg": 5.56}, {"hole": "H17", "avg": 4.11}, {"hole": "H18", "avg": 5.5}];
 
     if (document.getElementById("scoreChart")) {
       new Chart(document.getElementById("scoreChart"), {
