@@ -5,189 +5,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🏌️‍♂️ HHGC Thrash Rd3 — Last Update:  Saturday 17 May 2025</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<style>
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-  }
+  <style>
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
 
-  body {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-  .container {
-    max-width: 85%;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
 
-  h1, h2, h3 {
-    color: #000;
-  }
+    h1, h2, h3 {
+      color: #000;
+    }
 
-  .card {
-    background-color: #f9f9f9;
-    border-radius: 1px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    overflow-x: auto;
-    overflow-y: visible;
-  }
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 1px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      overflow-x: auto;
+      overflow-y: visible;
+    }
 
-  .winner {
-    background-color: #e0e0e0;
-    font-weight: bold;
-  }
+    .winner {
+      background-color: #e0e0e0;
+      font-weight: bold;
+    }
 
-  table {
-    width: 75%;
-    table-layout: auto;
-    border-collapse: collapse;
-    margin-top: 1rem;
-  }
+    table {
+      width: 100%;
+      max-width: 100%;
+      table-layout: auto;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      overflow-x: auto;
+    }
 
-  th, td {
-    padding: 0.6rem;
-    border: none;
-    text-align: center;
-    white-space: nowrap;
-    word-wrap: break-word;
-  }
+    th, td {
+      padding: 0.6rem;
+      border: none;
+      text-align: center;
+      white-space: nowrap;
+      word-wrap: break-word;
+    }
 
-  th:nth-child(3), td:nth-child(3) {
-    min-width: 40px;
-  }
+    th:nth-child(3), td:nth-child(3) {
+      min-width: 40px;
+    }
 
-  .tooltip[data-tip]:hover::after {
-    content: attr(data-tip);
-    position: absolute;
-    background: #000;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
+    .tooltip[data-tip]:hover::after {
+      content: attr(data-tip);
+      position: absolute;
+      background: #000;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
 
-  .chart-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-  }
+    .chart-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
 
-  .player-popover {
-    display: none;
-    background-color: #fff;
-    padding: 1rem;
-    border: none;
-    border-radius: 10px;
-    position: fixed;
-    z-index: 999;
-    color: #000;
-    width: 90vw;
-    max-height: 80vh;
-    overflow-y: auto;
-    top: 10vh;
-    left: 5vw;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    box-sizing: border-box;
-    scroll-padding-top: 2rem;
-  }
+    .player-popover {
+      display: none;
+      background-color: #fff;
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      position: fixed;
+      z-index: 999;
+      color: #000;
+      width: 90vw;
+      max-height: 80vh;
+      overflow-y: auto;
+      top: 10vh;
+      left: 5vw;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      box-sizing: border-box;
+      scroll-padding-top: 2rem;
+    }
 
-  .player-popover .close-btn {
-    text-align: right;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    color: #cc0000;
-    font-weight: bold;
-  }
+    .player-popover .close-btn {
+      text-align: right;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      color: #cc0000;
+      font-weight: bold;
+    }
 
-  .player-popover table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-  }
+    .player-popover table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
 
-  .player-popover th, .player-popover td {
-    padding: 0.4rem;
-    border: none;
-    text-align: center;
-  }
+    .player-popover th, .player-popover td {
+      padding: 0.4rem;
+      border: none;
+      text-align: center;
+    }
 
-  @media (max-width: 600px) {
-  body {
-    font-size: 8px;
-  }
+    @media (max-width: 600px) {
+      html, body {
+        overflow-x: hidden;
+      }
 
-  h1, h2, h3 {
-    font-size: 1.2rem;
-  }
+      body {
+        font-size: 9px;
+      }
 
-  .container {
-    padding: 0.5rem;
-    max-width: 95vw;
-  }
+      h1, h2, h3 {
+        font-size: 1.1rem;
+      }
 
-  th, td {
-    font-size: 0.7rem;
-    padding: 0.3rem;
-    white-space: normal;
-    word-break: break-word;
-  }
+      .container {
+        width: 100%;
+        max-width: 100vw;
+        padding: 0.5rem;
+        box-sizing: border-box;
+      }
 
-  table {
-    display: block;
-    overflow-x: auto;
-    width: 100%;
-  }
+      .card {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        max-width: 100%;
+        overflow-x: auto;
+      }
 
-  .card {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 95vw;
-    padding: 0.5rem;
-  }
+      table {
+        width: 100% !important;
+        display: block;
+        overflow-x: auto;
+      }
 
-  .player-popover {
-    width: 100vw !important;
-    height: 100vh !important;
-    left: 0 !important;
-    top: 0 !important;
-    border-radius: 0 !important;
-    padding: 1rem !important;
-    font-size: 0.9rem;
-    overflow-y: scroll;
-  }
+      th, td {
+        font-size: 0.75rem;
+        padding: 0.4rem;
+        white-space: nowrap;
+      }
 
-  .player-popover .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 2rem;
-  }
-}
+      .chart-container {
+        max-width: 100% !important;
+        margin: 1rem auto;
+        overflow-x: auto;
+      }
 
-</style>
+      .player-popover {
+        width: 100vw !important;
+        height: 100vh !important;
+        left: 0 !important;
+        top: 0 !important;
+        border-radius: 0 !important;
+        padding: 1rem !important;
+        font-size: 0.9rem;
+        overflow-y: scroll;
+      }
 
+      .player-popover .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-  <h1>🏌️‍♂️ HHGC Thrash Rd3 — Last Update:  Saturday 17 May 2025</h1>
+  <div class="container">
+    <h1>🏌️‍♂️ HHGC Thrash Rd3 — Last Update:  Saturday 17 May 2025</h1>
 
-  <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-  
-    <div class="chart-container">
-      <h3>Average Gross Score by Hole</h3>
-      <canvas id="holeChart"></canvas>
+    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+      <div class="chart-container">
+        <h3>Average Gross Score by Hole</h3>
+        <canvas id="holeChart"></canvas>
+      </div>
     </div>
-  </div>
-     <div style="flex: 1 1 600px; max-width: 500px;">
+
+    <div style="flex: 1 1 600px; max-width: 500px;">
       <div class="card">
         <h2>📊 Stats Summary</h2>
         <ul><li>- Avg Gross: - | Avg Nett: - | Avg Stableford: 16.4</li>
@@ -199,23 +211,18 @@
 <li>📉 Lowest Score on a Hole: Jeremy Goodwin scored 2 on Hole 8</li></ul>
       </div>
     </div>
-  </div> 
-  <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
-    <div style="flex: 2 1 600px;">
-      <div class="card">
-      <h2>Top 10 Gross Scores</h2>
-      <table class="leaderboard-table">
-      <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody>
-      </table>
 
-      <h2>Top 10 Nett Scores</h2>
-      <table class="leaderboard-table">
-      <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody>
-      </table>
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+      <div style="flex: 2 1 600px;">
+        <div class="card">
+          <h2>Top 10 Gross Scores</h2>
+          <table class="leaderboard-table"><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></table>
 
-      <h2>Top 10 Stableford Scores</h2>
-      <table class="leaderboard-table">
-      <thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>1</td><td><span class='player-link' onclick="showPlayer('Kevin Walker')">Kevin Walker 🥇</span></td><td>8.0</td><td>None</td><td>None</td><td>24</td></tr>
+          <h2>Top 10 Nett Scores</h2>
+          <table class="leaderboard-table"><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></table>
+
+          <h2>Top 10 Stableford Scores</h2>
+          <table class="leaderboard-table"><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>1</td><td><span class='player-link' onclick="showPlayer('Kevin Walker')">Kevin Walker 🥇</span></td><td>8.0</td><td>None</td><td>None</td><td>24</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>2</td><td><span class='player-link' onclick="showPlayer('Nick Kilbee')">Nick Kilbee 🥈</span></td><td>10.0</td><td>None</td><td>None</td><td>23</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Nigel Nosworthy')">Nigel Nosworthy 🥉</span></td><td>9.0</td><td>None</td><td>None</td><td>21</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 9: 2 🌟 Did someone say birdie (or eagle)?"><td>4</td><td><span class='player-link'   onclick="showPlayer('Chris Morris')">Chris Morris</span></td><td>1.0</td><td>None</td><td>None</td><td>21</td></tr>
@@ -224,13 +231,12 @@
 <tr class='' class="tooltip" data-tip="Hole 9: 2 🌟 Did someone say birdie (or eagle)?"><td>7</td><td><span class='player-link'   onclick="showPlayer('David Richardson')">David Richardson</span></td><td>6.0</td><td>None</td><td>None</td><td>20</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>8</td><td><span class='player-link'   onclick="showPlayer('Jeremy Goodwin')">Jeremy Goodwin</span></td><td>9.0</td><td>None</td><td>None</td><td>19</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>9</td><td><span class='player-link'   onclick="showPlayer('Kieran Cooper')">Kieran Cooper</span></td><td>8.0</td><td>None</td><td>None</td><td>19</td></tr>
-<tr class='' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>10</td><td><span class='player-link'   onclick="showPlayer('Rob Hayden')">Rob Hayden</span></td><td>4.0</td><td>None</td><td>None</td><td>19</td></tr></tbody>
-      </table>
-      <div class="card">
-        <h2>🏅 Div 1 (hcp 1–12)</h2>
-        <table>
+<tr class='' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>10</td><td><span class='player-link'   onclick="showPlayer('Rob Hayden')">Rob Hayden</span></td><td>4.0</td><td>None</td><td>None</td><td>19</td></tr></tbody></table>
+        </div>
 
-          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 9: 2 🌟 Did someone say birdie (or eagle)?"><td>1</td><td><span class='player-link' onclick="showPlayer('Chris Morris')">Chris Morris 🥇</span></td><td>1.0</td><td>None</td><td>None</td><td>21</td></tr>
+        <div class="card">
+          <h2>🏅 Div 1 (hcp 1–12)</h2>
+          <table><tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 9: 2 🌟 Did someone say birdie (or eagle)?"><td>1</td><td><span class='player-link' onclick="showPlayer('Chris Morris')">Chris Morris 🥇</span></td><td>1.0</td><td>None</td><td>None</td><td>21</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 9: 2 🌟 Did someone say birdie (or eagle)?"><td>2</td><td><span class='player-link' onclick="showPlayer('David Richardson')">David Richardson 🥈</span></td><td>6.0</td><td>None</td><td>None</td><td>20</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>3</td><td><span class='player-link' onclick="showPlayer('Rob Hayden')">Rob Hayden 🥉</span></td><td>4.0</td><td>None</td><td>None</td><td>19</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>4</td><td><span class='player-link'   onclick="showPlayer('Ben R. Richardson')">Ben R. Richardson</span></td><td>2.0</td><td>None</td><td>None</td><td>18</td></tr>
@@ -244,14 +250,12 @@
 <tr class='' class="tooltip" data-tip="Hole 3: 7 🫣 Might need a drink after that one"><td>12</td><td><span class='player-link'   onclick="showPlayer('Alex Barber')">Alex Barber</span></td><td>6.0</td><td>None</td><td>None</td><td>14</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>13</td><td><span class='player-link'   onclick="showPlayer('Russell Harding')">Russell Harding</span></td><td>6.0</td><td>None</td><td>None</td><td>14</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 7: 2 🌟 Did someone say birdie (or eagle)?"><td>14</td><td><span class='player-link'   onclick="showPlayer('Barry Carter')">Barry Carter</span></td><td>3.0</td><td>None</td><td>None</td><td>13</td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>15</td><td><span class='player-link'   onclick="showPlayer('Kevin Brown')">Kevin Brown</span></td><td>4.0</td><td>None</td><td>None</td><td>12</td></tr></tbody></tbody>
-        </table>
-      </div>
-      <div class="card">
-        <h2>🏅 Div 2 (hcp 13+ – The Choppers)</h2>
-        <table>
+<tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>15</td><td><span class='player-link'   onclick="showPlayer('Kevin Brown')">Kevin Brown</span></td><td>4.0</td><td>None</td><td>None</td><td>12</td></tr></tbody></tbody></table>
+        </div>
 
-          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>1</td><td><span class='player-link' onclick="showPlayer('Kevin Walker')">Kevin Walker 🥇</span></td><td>8.0</td><td>None</td><td>None</td><td>24</td></tr>
+        <div class="card">
+          <h2>🏅 Div 2 (hcp 13+ – The Choppers)</h2>
+          <table><tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>1</td><td><span class='player-link' onclick="showPlayer('Kevin Walker')">Kevin Walker 🥇</span></td><td>8.0</td><td>None</td><td>None</td><td>24</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>2</td><td><span class='player-link' onclick="showPlayer('Nick Kilbee')">Nick Kilbee 🥈</span></td><td>10.0</td><td>None</td><td>None</td><td>23</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Nigel Nosworthy')">Nigel Nosworthy 🥉</span></td><td>9.0</td><td>None</td><td>None</td><td>21</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>4</td><td><span class='player-link'   onclick="showPlayer('Ross MacDonald')">Ross MacDonald</span></td><td>10.0</td><td>None</td><td>None</td><td>20</td></tr>
@@ -286,32 +290,23 @@
 <tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>33</td><td><span class='player-link'   onclick="showPlayer('Jack Cox-Rogers')">Jack Cox-Rogers</span></td><td>12.0</td><td>None</td><td>None</td><td>13</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>34</td><td><span class='player-link'   onclick="showPlayer('Jackie Cook')">Jackie Cook</span></td><td>12.0</td><td>None</td><td>None</td><td>12</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>35</td><td><span class='player-link'   onclick="showPlayer('Keith Dunne')">Keith Dunne</span></td><td>8.0</td><td>None</td><td>None</td><td>12</td></tr>
-<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>36</td><td><span class='player-link'   onclick="showPlayer('Simon Charlton')">Simon Charlton</span></td><td>14.0</td><td>None</td><td>None</td><td>10</td></tr></tbody></tbody>
-        </table>
+<tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>36</td><td><span class='player-link'   onclick="showPlayer('Simon Charlton')">Simon Charlton</span></td><td>14.0</td><td>None</td><td>None</td><td>10</td></tr></tbody></tbody></table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>🏅 Gross Leaderboard</h2>
+        <table><tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></tbody></table>
+      </div>
+
+      <div class="card">
+        <h2>🏅 Nett Leaderboard</h2>
+        <table><tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></tbody></table>
       </div>
     </div>
 
-      </div>
-      <div class="card">
-        <h2>🏅 Gross Leaderboard</h2>
-        <table>
-
-          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></tbody>
-        </table>
-      </div>
-      <div class="card">
-        <h2>🏅 Nett Leaderboard</h2>
-        <table>
-
-          <tbody><thead><tr><th>Pos</th><th>Player</th><th>HCP</th><th>Gross</th><th>Nett</th><th>Stableford</th></tr></thead><tbody></tbody></tbody>
-        </table>
-      </div>
-
-
-
-
-  <!-- 👤 Player popups rendered here -->
-  
+    <!-- 👤 Player popups rendered here -->
+    
             <div id="popover-Ben_R._Richardson" class="player-popover">
             <div class="close-btn" data-name="Ben_R._Richardson" onclick="hidePopoverByElement(this)">&times;</div>
             <h3>Ben R. Richardson</h3>
@@ -588,7 +583,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>4</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>43</td></tr><tr><td>H11</td><td>43</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>None</li></ul>
+            <ul><li>📞 **On Hold Champion**: Mark Drake kept cool on 9 and still scored 3</li></ul>
             </div>
             
 
@@ -638,7 +633,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H2</td><td>6</td></tr><tr><td>H3</td><td>6</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>8</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>38</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>📞 **On Hold Champion**: Pauline Drew kept cool on 9 and still scored 3</li></ul>
+            <ul><li>None</li></ul>
             </div>
             
 
@@ -821,57 +816,55 @@
             <ul><li>None</li></ul>
             </div>
             
-</div>
+  </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const scoreData = [5, 4, 4, 5, 4, 5, 3, 3, 4, 8, 4, 5, 7, 6, 7, 6, 5, 4, 7, 4, 5, 4, 7, 4, 3, 5, 5, 7, 5, 6, 6, 3, 4, 4, 8, 6, 8, 6, 5, 8, 5, 6, 5, 8, 5, 7, 6, 4, 5, 3, 2, 3, 9, 7, 4, 6, 6, 8, 4, 4, 5, 5, 4, 6, 5, 5, 6, 3, 4, 3, 7, 7, 6, 5, 4, 7, 4, 5, 6, 7, 4, 4, 5, 5, 5, 3, 4, 4, 5, 5, 8, 6, 5, 7, 4, 5, 3, 7, 6, 7, 6, 4, 4, 6, 3, 4, 6, 4, 4, 5, 4, 6, 3, 5, 5, 8, 5, 6, 6, 5, 6, 4, 4, 8, 5, 7, 4, 5, 5, 3, 5, 5, 8, 4, 3, 6, 3, 6, 4, 5, 4, 6, 5, 5, 4, 5, 2, 5, 4, 6, 6, 5, 4, 6, 5, 4, 4, 3, 7, 6, 5, 4, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 5, 4, 4, 4, 8, 5, 6, 6, 4, 8, 5, 6, 6, 7, 4, 5, 5, 4, 6, 3, 4, 5, 6, 5, 4, 6, 5, 6, 4, 5, 4, 7, 5, 6, 6, 6, 4, 3, 4, 4, 4, 5, 6, 6, 4, 5, 3, 7, 5, 6, 6, 5, 6, 6, 4, 7, 6, 5, 7, 5, 6, 4, 7, 6, 4, 5, 5, 5, 3, 5, 3, 7, 5, 4, 5, 7, 5, 5, 5, 4, 7, 7, 6, 4, 6, 6, 5, 6, 5, 4, 6, 4, 5, 4, 7, 4, 5, 5, 5, 5, 6, 6, 6, 4, 8, 5, 3, 6, 3, 5, 3, 5, 4, 3, 4, 4, 6, 6, 4, 4, 4, 5, 5, 3, 3, 7, 6, 5, 5, 5, 4, 3, 5, 5, 4, 6, 4, 6, 4, 5, 3, 4, 5, 4, 4, 4, 4, 4, 4, 4, 3, 2, 6, 5, 6, 5, 5, 4, 6, 3, 6, 5, 4, 5, 4, 5, 4, 5, 4, 7, 5, 5, 5, 6, 3, 6, 4, 8, 5, 6, 6, 5, 7, 3, 8, 5, 4, 5, 6, 5, 5, 5, 4, 6, 4, 4, 5, 4, 4, 4, 5, 4, 6, 4, 5, 5, 4, 5, 5, 3, 2, 6, 5, 4, 5, 5, 5, 3, 4, 8, 4, 4, 5, 4, 6, 4, 4, 4, 8, 5, 5, 7, 6, 6, 9, 8, 4, 7, 6, 4, 7, 5, 5, 4, 6, 5, 7, 5, 5, 5, 4, 5, 3, 4, 3, 5, 4, 4, 5, 3, 5, 3, 4, 5];
-    const holeAverages = [{"hole": "H1", "avg": 6.62}, {"hole": "H2", "avg": 4.92}, {"hole": "H3", "avg": 5.13}, {"hole": "H4", "avg": 5.3}, {"hole": "H5", "avg": 4.74}, {"hole": "H6", "avg": 5.59}, {"hole": "H7", "avg": 3.89}, {"hole": "H8", "avg": 4.72}, {"hole": "H9", "avg": 4.02}];
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const scoreData = [5, 4, 4, 5, 4, 5, 3, 3, 4, 8, 4, 5, 7, 6, 7, 6, 5, 4, 7, 4, 5, 4, 7, 4, 3, 5, 5, 7, 5, 6, 6, 3, 4, 4, 8, 6, 8, 6, 5, 8, 5, 6, 5, 8, 5, 7, 6, 4, 5, 3, 2, 3, 9, 7, 4, 6, 6, 8, 4, 4, 5, 5, 4, 6, 5, 5, 6, 3, 4, 3, 7, 7, 6, 5, 4, 7, 4, 5, 6, 7, 4, 4, 5, 5, 5, 3, 4, 4, 5, 5, 8, 6, 5, 7, 4, 5, 3, 7, 6, 7, 6, 4, 4, 6, 3, 4, 6, 4, 4, 5, 4, 6, 3, 5, 5, 8, 5, 6, 6, 5, 6, 4, 4, 8, 5, 7, 4, 5, 5, 3, 5, 5, 8, 4, 3, 6, 3, 6, 4, 5, 4, 6, 5, 5, 4, 5, 2, 5, 4, 6, 6, 5, 4, 6, 5, 4, 4, 3, 7, 6, 5, 4, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 5, 4, 4, 4, 8, 5, 6, 6, 4, 8, 5, 6, 6, 7, 4, 5, 5, 4, 6, 3, 4, 5, 6, 5, 4, 6, 5, 6, 4, 5, 4, 7, 5, 6, 6, 6, 4, 3, 4, 4, 4, 5, 6, 6, 4, 5, 3, 7, 5, 6, 6, 5, 6, 6, 4, 7, 6, 5, 7, 5, 6, 4, 7, 6, 4, 5, 5, 5, 3, 5, 3, 7, 5, 4, 5, 7, 5, 5, 5, 4, 7, 7, 6, 4, 6, 6, 5, 6, 5, 4, 6, 4, 5, 4, 7, 4, 5, 5, 5, 5, 6, 6, 6, 4, 8, 5, 3, 6, 3, 5, 3, 5, 4, 3, 4, 4, 6, 6, 4, 4, 4, 5, 5, 3, 3, 7, 6, 5, 5, 5, 4, 3, 5, 5, 4, 6, 4, 6, 4, 5, 3, 4, 5, 4, 4, 4, 4, 4, 4, 4, 3, 2, 6, 5, 6, 5, 5, 4, 6, 3, 6, 5, 4, 5, 4, 5, 4, 5, 4, 7, 5, 5, 5, 6, 3, 6, 4, 8, 5, 6, 6, 5, 7, 3, 8, 5, 4, 5, 6, 5, 5, 5, 4, 6, 4, 4, 5, 4, 4, 4, 5, 4, 6, 4, 5, 5, 4, 5, 5, 3, 2, 6, 5, 4, 5, 5, 5, 3, 4, 8, 4, 4, 5, 4, 6, 4, 4, 4, 8, 5, 5, 7, 6, 6, 9, 8, 4, 7, 6, 4, 7, 5, 5, 4, 6, 5, 7, 5, 5, 5, 4, 5, 3, 4, 3, 5, 4, 4, 5, 3, 5, 3, 4, 5];
+      const holeAverages = [{"hole": "H1", "avg": 6.62}, {"hole": "H2", "avg": 4.92}, {"hole": "H3", "avg": 5.13}, {"hole": "H4", "avg": 5.3}, {"hole": "H5", "avg": 4.74}, {"hole": "H6", "avg": 5.59}, {"hole": "H7", "avg": 3.89}, {"hole": "H8", "avg": 4.72}, {"hole": "H9", "avg": 4.02}];
 
-    if (document.getElementById("scoreChart")) {
-      new Chart(document.getElementById("scoreChart"), {
-        type: 'bar',
-        data: {
-          labels: scoreData.map(e => e.label),
-          datasets: [{ label: 'Players', data: scoreData.map(e => e.count) }]
-        },
-        options: { responsive: true, plugins: { legend: { display: false } } }
-      });
-    }
+      if (document.getElementById("scoreChart")) {
+        new Chart(document.getElementById("scoreChart"), {
+          type: 'bar',
+          data: {
+            labels: scoreData.map(e => e.label),
+            datasets: [{ label: 'Players', data: scoreData.map(e => e.count) }]
+          },
+          options: { responsive: true, plugins: { legend: { display: false } } }
+        });
+      }
 
-    if (document.getElementById("holeChart")) {
-      new Chart(document.getElementById("holeChart"), {
-        type: 'line',
-        data: {
-          labels: holeAverages.map(e => e.hole),
-          datasets: [{ label: 'Avg Stableford', data: holeAverages.map(e => e.avg), fill: false, tension: 0.2 }]
-        },
-        options: { responsive: true }
-      });
-    }
-  });
-</script>
-<script>
-  function showPlayer(name) {
-    const id = "popover-" + name.replace(/ /g, "_").replace(/'/g, "");
-    document.querySelectorAll(".player-popover").forEach(el => el.style.display = "none");
-    const pop = document.getElementById(id);
-    if (pop) pop.style.display = "block";
-  }
+      if (document.getElementById("holeChart")) {
+        new Chart(document.getElementById("holeChart"), {
+          type: 'line',
+          data: {
+            labels: holeAverages.map(e => e.hole),
+            datasets: [{ label: 'Avg Stableford', data: holeAverages.map(e => e.avg), fill: false, tension: 0.2 }]
+          },
+          options: { responsive: true }
+        });
+      }
+    });
 
-  function hidePopoverByElement(el) {
-    const id = el.getAttribute("data-name");
-    const pop = document.getElementById("popover-" + id);
-    if (pop) pop.style.display = "none";
-  }
-
-  document.addEventListener("click", function(e) {
-    if (!e.target.closest(".player-popover") && !e.target.closest(".player-link")) {
+    function showPlayer(name) {
+      const id = "popover-" + name.replace(/ /g, "_").replace(/'/g, "");
       document.querySelectorAll(".player-popover").forEach(el => el.style.display = "none");
+      const pop = document.getElementById(id);
+      if (pop) pop.style.display = "block";
     }
-  });
-</script>
 
+    function hidePopoverByElement(el) {
+      const id = el.getAttribute("data-name");
+      const pop = document.getElementById("popover-" + id);
+      if (pop) pop.style.display = "none";
+    }
+
+    document.addEventListener("click", function(e) {
+      if (!e.target.closest(".player-popover") && !e.target.closest(".player-link")) {
+        document.querySelectorAll(".player-popover").forEach(el => el.style.display = "none");
+      }
+    });
+  </script>
 </body>
 </html>
 
