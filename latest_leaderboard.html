@@ -15,6 +15,11 @@
       max-width: 40px;
       width: 5%;
     }
+    .name-pos {
+      min-width: 30px;
+      max-width: 100px;
+      width: 10%;
+    }
 
     body {
       background-color: #ffffff;
@@ -212,17 +217,17 @@
     <div class="card">
       <h2>Top 10 Gross Scores</h2>
       <div class="table-wrapper">
-        <table class="leaderboard-table"><thead><tr><th class='col-pos'>Pos</th><th>Player</th><th class='col-pos'>Stableford</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody></tbody></table>
+        <table class="leaderboard-table"><thead><tr><th class='col-pos'>Pos</th><th class='name-pos'>Player</th><th class='col-pos'>Points</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody></tbody></table>
       </div>
 
       <h2>Top 10 Nett Scores</h2>
       <div class="table-wrapper">
-        <table class="leaderboard-table"><thead><tr><th class='col-pos'>Pos</th><th>Player</th><th class='col-pos'>Stableford</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody></tbody></table>
+        <table class="leaderboard-table"><thead><tr><th class='col-pos'>Pos</th><th class='name-pos'>Player</th><th class='col-pos'>Points</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody></tbody></table>
       </div>
 
       <h2>Top 10 Stableford Scores</h2>
       <div class="table-wrapper">
-        <table class="leaderboard-table"><thead><tr><th class='col-pos'>Pos</th><th>Player</th><th class='col-pos'>Stableford</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>1</td><td><span class='player-link' onclick="showPlayer('Kevin Walker')">Kevin Walker 🥇</span></td><td>24</td><td>None</td><td>None</td><td>8.0</td></tr>
+        <table class="leaderboard-table"><thead><tr><th class='col-pos'>Pos</th><th class='name-pos'>Player</th><th class='col-pos'>Points</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>1</td><td><span class='player-link' onclick="showPlayer('Kevin Walker')">Kevin Walker 🥇</span></td><td>24</td><td>None</td><td>None</td><td>8.0</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>2</td><td><span class='player-link' onclick="showPlayer('Nick Kilbee')">Nick Kilbee 🥈</span></td><td>23</td><td>None</td><td>None</td><td>10.0</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Nigel Nosworthy')">Nigel Nosworthy 🥉</span></td><td>21</td><td>None</td><td>None</td><td>9.0</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 9: 2 🌟 Did someone say birdie (or eagle)?"><td>4</td><td><span class='player-link'   onclick="showPlayer('Chris Morris')">Chris Morris</span></td><td>21</td><td>None</td><td>None</td><td>1.0</td></tr>
@@ -238,7 +243,7 @@
     <div class="card">
       <h2>🏅 Div 1 (hcp 1–12)</h2>
       <div class="table-wrapper">
-        <table><tbody><thead><tr><th class='col-pos'>Pos</th><th>Player</th><th class='col-pos'>Stableford</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 9: 2 🌟 Did someone say birdie (or eagle)?"><td>1</td><td><span class='player-link' onclick="showPlayer('Chris Morris')">Chris Morris 🥇</span></td><td>21</td><td>None</td><td>None</td><td>1.0</td></tr>
+        <table><tbody><thead><tr><th class='col-pos'>Pos</th><th class='name-pos'>Player</th><th class='col-pos'>Points</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 9: 2 🌟 Did someone say birdie (or eagle)?"><td>1</td><td><span class='player-link' onclick="showPlayer('Chris Morris')">Chris Morris 🥇</span></td><td>21</td><td>None</td><td>None</td><td>1.0</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 9: 2 🌟 Did someone say birdie (or eagle)?"><td>2</td><td><span class='player-link' onclick="showPlayer('David Richardson')">David Richardson 🥈</span></td><td>20</td><td>None</td><td>None</td><td>6.0</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>3</td><td><span class='player-link' onclick="showPlayer('Rob Hayden')">Rob Hayden 🥉</span></td><td>19</td><td>None</td><td>None</td><td>4.0</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>4</td><td><span class='player-link'   onclick="showPlayer('Ben R. Richardson')">Ben R. Richardson</span></td><td>18</td><td>None</td><td>None</td><td>2.0</td></tr>
@@ -259,7 +264,7 @@
     <div class="card">
       <h2>🏅 Div 2 (hcp 13+ – The Choppers)</h2>
       <div class="table-wrapper">
-        <table><tbody><thead><tr><th class='col-pos'>Pos</th><th>Player</th><th class='col-pos'>Stableford</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>1</td><td><span class='player-link' onclick="showPlayer('Kevin Walker')">Kevin Walker 🥇</span></td><td>24</td><td>None</td><td>None</td><td>8.0</td></tr>
+        <table><tbody><thead><tr><th class='col-pos'>Pos</th><th class='name-pos'>Player</th><th class='col-pos'>Points</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody><tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>1</td><td><span class='player-link' onclick="showPlayer('Kevin Walker')">Kevin Walker 🥇</span></td><td>24</td><td>None</td><td>None</td><td>8.0</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 10: 10+ 😰 Hope your wedge survived!"><td>2</td><td><span class='player-link' onclick="showPlayer('Nick Kilbee')">Nick Kilbee 🥈</span></td><td>23</td><td>None</td><td>None</td><td>10.0</td></tr>
 <tr class='winner' class="tooltip" data-tip="Hole 1: 7 🫣 Might need a drink after that one"><td>3</td><td><span class='player-link' onclick="showPlayer('Nigel Nosworthy')">Nigel Nosworthy 🥉</span></td><td>21</td><td>None</td><td>None</td><td>9.0</td></tr>
 <tr class='' class="tooltip" data-tip="Hole 1: 8 😬 We’ve all been there…"><td>4</td><td><span class='player-link'   onclick="showPlayer('Ross MacDonald')">Ross MacDonald</span></td><td>20</td><td>None</td><td>None</td><td>10.0</td></tr>
@@ -301,14 +306,14 @@
     <div class="card">
       <h2>🏅 Gross Leaderboard</h2>
       <div class="table-wrapper">
-        <table><tbody><thead><tr><th class='col-pos'>Pos</th><th>Player</th><th class='col-pos'>Stableford</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody></tbody></tbody></table>
+        <table><tbody><thead><tr><th class='col-pos'>Pos</th><th class='name-pos'>Player</th><th class='col-pos'>Points</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody></tbody></tbody></table>
       </div>
     </div>
 
     <div class="card">
       <h2>🏅 Nett Leaderboard</h2>
       <div class="table-wrapper">
-        <table><tbody><thead><tr><th class='col-pos'>Pos</th><th>Player</th><th class='col-pos'>Stableford</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody></tbody></tbody></table>
+        <table><tbody><thead><tr><th class='col-pos'>Pos</th><th class='name-pos'>Player</th><th class='col-pos'>Points</th><th class='col-pos'>Nett</th><th class='col-pos'>Gross</th><th class='col-pos'>Hcp</th></tr></thead><tbody></tbody></tbody></table>
       </div>
     </div>
 
@@ -420,7 +425,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>5</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>8</td></tr><tr><td>H4</td><td>6</td></tr><tr><td>H5</td><td>5</td></tr><tr><td>H6</td><td>7</td></tr><tr><td>H7</td><td>4</td></tr><tr><td>H8</td><td>5</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>48</td></tr><tr><td>H11</td><td>48</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>📞 **On Hold Champion**: Kamil Sieczka kept cool on 9 and still scored 3</li></ul>
+            <ul><li>None</li></ul>
             </div>
             
 
@@ -810,7 +815,7 @@
             <strong>Hole-by-hole:</strong>
             <table><tr><th>Hole</th><th>Score</th></tr><tr><td>H1</td><td>7</td></tr><tr><td>H2</td><td>5</td></tr><tr><td>H3</td><td>5</td></tr><tr><td>H4</td><td>5</td></tr><tr><td>H5</td><td>4</td></tr><tr><td>H6</td><td>5</td></tr><tr><td>H7</td><td>3</td></tr><tr><td>H8</td><td>4</td></tr><tr><td>H9</td><td>3</td></tr><tr><td>H10</td><td>41</td></tr><tr><td>H11</td><td>41</td></tr></table>
             <strong>Awards:</strong>
-            <ul><li>None</li></ul>
+            <ul><li>📞 **On Hold Champion**: Joshua Smith kept cool on 9 and still scored 3</li></ul>
             </div>
             
 
