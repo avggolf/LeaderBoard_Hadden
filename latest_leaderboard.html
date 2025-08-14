@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🏌️‍♂️ HHGC Thrash Rd16 — Last Update:  Thursday 14 August 2025 17:26</title>
+  <title>🏌️‍♂️ HHGC Thrash Rd16 — Last Update:  Thursday 14 August 2025 17:31</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     html, body {
@@ -190,18 +190,74 @@
         right: 20px;
         font-size: 2rem;
       }
-      .panel.inprogress{
-  background:#1e2a36;border:1px solid #33495e;border-radius:12px;padding:12px;margin:16px 0
+/* In-Progress card: better contrast + spacing */
+.inprogress-card {
+  background: #12263a;           /* dark, not pure black */
+  color: #f2f6fb;                /* light text for contrast */
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin: 14px 0;
+  overflow: hidden;
 }
-.panel.inprogress h2{margin:0 0 8px}
-.panel.inprogress .hint{opacity:.8;font-size:.9em}
+.inprogress-card h3,
+.inprogress-card h4 { margin: 0 0 8px 0; color: #ffffff; }
+
+/* Fix list layout */
+.inprogress-list {
+  list-style: none;              /* drop default bullets */
+  margin: 0;
+  padding: 0;
+}
+.inprogress-item {
+  display: flex;                 /* name … points */
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.inprogress-item:last-child { border-bottom: 0; }
+
+/* Emoji/icon column (clock) */
+.inprogress-ico { flex: 0 0 auto; }
+
+/* Name wraps nicely, points stick to right edge */
+.inprogress-name { 
+  flex: 1 1 auto; 
+  min-width: 0; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+.inprogress-pts  { 
+  flex: 0 0 auto; 
+  font-weight: 700; 
+  opacity: .95; 
+}
+
+/* Ensure links are readable on dark bg */
+.inprogress-card a { color: #e8f0ff; text-decoration: none; }
+.inprogress-card a:hover { text-decoration: underline; }
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .inprogress-card { 
+    padding: 12px; 
+    border-radius: 12px; 
+  }
+  .inprogress-item { padding: 8px 0; }
+  .inprogress-name, .inprogress-pts { font-size: 16px; line-height: 1.2; }
+}
+
+/* Prevent iOS odd auto-zoom/resize artifacts */
+html { -webkit-text-size-adjust: 100%; }
+
 
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🏌️‍♂️ HHGC Thrash Rd16 — Last Update:  Thursday 14 August 2025 17:26</h1>
+    <h1>🏌️‍♂️ HHGC Thrash Rd16 — Last Update:  Thursday 14 August 2025 17:31</h1>
 
     <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
       <div class="chart-container">
@@ -221,7 +277,7 @@
       
         <section class="panel inprogress">
           <h2>🕒 In-Progress Rounds (not in leaderboard)</h2>
-          <ul><li><strong>Alex Barber</strong> — 43 pts</li>
+          <ul><li><strong>Alex Barber</strong> — 38 pts</li>
 <li><strong>David Stas</strong> — 50 pts</li>
 <li><strong>John Hall</strong> — 33 pts</li></ul>
           <p class="hint">These rounds look incomplete or are still being entered — they’ll appear once valid.</p>
